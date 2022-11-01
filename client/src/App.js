@@ -1,5 +1,6 @@
 import "./App.css";
-import Students from "./components/students";
+import Layout from './components/layout';
+import Locations from './components/locations';
 import NavBar from './components/nav-bar';
 import { Route, Routes } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -16,11 +17,12 @@ function App() {
     <div id="App" className="d-flex flex-column h-100">
       <NavBar />
       <div className="container flex-grow-1">
-        {user ? <a>Hello From Techtonica</a> : <a>Hello {user.nickname}</a>}
-        <Routes>
-          <Route path="/profile" element={<Students/>} />
-        </Routes>
+        {user ? <a>Hello From Techtonica</a> : <a>Hello user</a>}
       </div>
+      <Routes>
+          <Route path="/" element={<Layout/>} />
+          <Route path="/locations" element={<Locations/>} />
+      </Routes>
     </div>
   );
 }
