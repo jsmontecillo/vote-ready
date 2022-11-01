@@ -79,6 +79,27 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
 
 });
 
+// locations
+
+app.get("/locations", (req,res) => {
+  //const address = req.params.favorite;
+  const apiKey = process.env.REACT_API_KEY;
+  const params = new URLSearchParams({
+      address: "7285 Franklin Ave Los Angeles CA 90046",
+      key: apiKey,
+  });
+  const url = `https://www.googleapis.com/civicinfo/v2/voterinfo?${params}`; 
+  console.log(url);
+  fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+       res.send(data);
+   })
+   .catch((err) => {
+       console.log(err);
+   });
+});
+
 
 
 // console.log that your server is up and running
