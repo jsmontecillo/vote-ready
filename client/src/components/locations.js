@@ -15,14 +15,15 @@ const Locations = () => {
         .then((data) => 
             {
                 console.log(data);
-                const filtered = data.list.filter((i, index) => {
-                    return index % 8 === 0 || index === 0;
-                })
-                console.log(filtered);
-                setLocations(filtered);
+                // const filtered = data.list.filter((i, index) => {
+                //     return index % 8 === 0 || index === 0;
+                // })
+                // console.log(filtered);
+                // setLocations(filtered);
             }) 
     
     }
+    
     return (
         <h1>Locations</h1>
     )

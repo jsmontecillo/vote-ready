@@ -4,13 +4,14 @@ import Candidates from "./candidates.js";
 import { BrowserRouter, Route, Link, Outlet } from "react-router-dom";
 import './layout.css';
 
-function Layout() {
+function Layout(props) {
   return (
     <>
       <nav className="nav-bar">
         <Link to="/" className="link">HOME</Link>
         <Link to="/mission" className="link">MISSION</Link>
         <Link to="/location" className="link">LOCATIONS</Link>
+        {props.user ? (<Link to="/profile" className="link">YOUR PROFILE</Link>) : (null)}
       </nav>
 
       <Header title="VOTE READY"/>

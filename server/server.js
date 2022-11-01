@@ -48,6 +48,23 @@ app.post('/api/students', cors(), async (req, res) => {
   res.json(result.rows[0]);
 });
 
+//adding new users from auth0
+
+app.post('/api/me', cors(), async (req, res) => {
+  console.log(req.body);
+  const newUser = {
+    lastname: req.body.family_name,
+    firstname: req.body.given_name,
+    email: req.body.email,
+    sub: req.body.sub
+  }
+  console.log(newUser);
+  const result = await db.query('INSERT INTO users(lastname, firstname, email, sub) VALUES($1, $2, $3, $4) RETURNING *', [newUser.lastname, newUser.firstname, newUser.email, newUser.sub]);
+  console.log(result.rows[0]);
+});
+
+//TBD: need to check if database already has a user
+
 //A put request - Update a student 
 app.put('/api/students/:studentId', cors(), async (req, res) =>{
   console.log(req.params);

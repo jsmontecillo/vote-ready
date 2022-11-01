@@ -2,9 +2,10 @@ import "./App.css";
 import Layout from './components/layout';
 import Locations from './components/locations';
 import NavBar from './components/nav-bar';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import Loading from './components/loading';
+import Profile from './components/profile';
 
 function App() {
   const { isLoading } = useAuth0();
@@ -17,11 +18,12 @@ function App() {
     <div id="App" className="d-flex flex-column h-100">
       <NavBar />
       <div className="container flex-grow-1">
-        {user ? <a>Hello From Techtonica</a> : <a>Hello user</a>}
+        {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
       </div>
       <Routes>
-          <Route path="/" element={<Layout/>} />
+          <Route path="/" element={<Layout user={user}/>} />
           <Route path="/locations" element={<Locations/>} />
+          <Route path="/profile" element={<Profile user={user}/>} />
       </Routes>
     </div>
   );
