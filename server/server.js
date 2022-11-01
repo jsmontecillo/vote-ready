@@ -98,7 +98,7 @@ app.delete('/api/students/:studentId', cors(), async (req, res) =>{
 
 // locations
 
-app.get("/locations", (req,res) => {
+app.get("/election", (req,res) => {
   //const address = req.params.favorite;
   const apiKey = process.env.REACT_API_KEY;
   const params = new URLSearchParams({

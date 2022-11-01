@@ -10,7 +10,8 @@ function Layout(props) {
       <nav className="nav-bar">
         <Link to="/" className="link">HOME</Link>
         <Link to="/mission" className="link">MISSION</Link>
-        <Link to="/location" className="link">LOCATIONS</Link>
+        <Link to="/locations" className="link">LOCATIONS</Link>
+        <Link to="/feedback" className="link">FEEDBACK</Link>
         {props.user ? (<Link to="/profile" className="link">YOUR PROFILE</Link>) : (null)}
       </nav>
 

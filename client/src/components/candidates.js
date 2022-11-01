@@ -1,15 +1,15 @@
 import {useState, useEffect} from 'react';
 
 const Candidates = () => {
-    const [candidates, setCandidates] = useState([]);
+    const [contests, setContests] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8888/api/candidates")
+        fetch("http://localhost:8888/election")
           .then((response) => response.json())
           .then((users) => {
-                setCandidates(users);
+                setContests(users.contests);
             });
-    }, [candidates]);
+    }, [contests]);
 
     return (
         <>
