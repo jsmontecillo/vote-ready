@@ -8,6 +8,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Loading from './components/loading';
 import Profile from './components/profile';
 import Mission from './mission';
+import Feedback from './components/feedback';
 
 function App() {
   const [isClicked, setClicked] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/locations" element={<Locations user={user}/>} />
           <Route path="/profile" element={<Profile user={user}/>} />
           <Route path="/mission" element={<Mission user={user}/>} />
+          <Route path="feedback" element={<Feedback user={user}/>} />
       </Routes>
     </div>
   );
