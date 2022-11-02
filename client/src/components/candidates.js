@@ -1,19 +1,14 @@
-import {useState, useEffect} from 'react';
+import CandidateCard from './candidate-card';
 
-const Candidates = () => {
-    const [contests, setContests] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:8888/election")
-          .then((response) => response.json())
-          .then((users) => {
-                setContests(users.contests);
-            });
-    }, [contests]);
-
+const Candidates = (props) => {
+    let candidates = props.candidates;
     return (
         <>
-            <h1>Hello</h1>
+            {candidates.map((c) => {
+            return (
+                <CandidateCard candidate={c} />
+            )
+            })}
         </>
     )
 }
