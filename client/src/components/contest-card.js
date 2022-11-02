@@ -6,6 +6,7 @@ const ContestCard = (props) => {
         <>
             <h1>{contest.ballotTitle}</h1>
             <h3>Candidates</h3>
+            {contest.candidates ? <Candidates candidates={contest.candidates} /> : (null)}
         </>
     )
 }

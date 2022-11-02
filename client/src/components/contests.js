@@ -10,7 +10,7 @@ const Contests = () => {
           .then((users) => {
                 setContests(users.contests);
             });
-    }, [contests]);
+    }, []);
     console.log(contests);
 
     return (
