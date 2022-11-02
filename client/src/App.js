@@ -9,6 +9,7 @@ import Loading from './components/loading';
 import Profile from './components/profile';
 import Mission from './mission';
 import Feedback from './components/feedback';
+import Footer from './footer';
 
 function App() {
   const [isClicked, setClicked] = useState(false);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/mission" element={<Mission user={user}/>} />
           <Route path="feedback" element={<Feedback user={user}/>} />
       </Routes>
+      <Footer />
     </div>
   );
 }

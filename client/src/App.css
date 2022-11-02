@@ -60,3 +60,8 @@ span {
   font-size: 18px;
   transition: 1s ease;
 }
+
+.contact {
+  background-color: green;
+  padding: 100px;
+}
