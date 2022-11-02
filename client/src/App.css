@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
 .App {
   text-align: center;
+  font-family: 'BIZ UDPMincho', serif;
 }
 
 .App-logo {
@@ -35,4 +37,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+span {
+  float: right;
+  padding: 10px;
+  color: white;
+}
+
+.nav-bar {
+  -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+}
+
+.menu {
+  color: white;
+  font-size: 16px;
+}
+
+.menu:hover {
+  font-size: 18px;
+  transition: 1s ease;
 }

@@ -1,7 +1,9 @@
 import {useState, useEffect} from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
 import Header from './header.js';
+import la2 from './la2.jpg';
 
-const Locations = () => {
+const Locations = (props) => {
     const [locations, setLocations] = useState([]);
     const [searched, setSearched] = useState(false);
     const [data, setData] = useState(locations);
@@ -31,7 +33,7 @@ const Locations = () => {
 
     return (
         <div>
-            <Header title="Polling Locations"/>
+            <Header title="Polling Locations" image={la2}/>
             <h3>Find Events</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>
