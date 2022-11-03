@@ -54,22 +54,20 @@ app.post('/api/me', cors(), async (req, res) => {
   const newUser = {
     last_name: req.body.family_name,
     first_name: req.body.given_name,
-    email: req.body.email,
-    sub: req.body.sub
+    email: req.body.email
   }
   const queryEmail = 'SELECT * FROM users WHERE email=$1 LIMIT 1';
   const valuesEmail = [newUser.email];
   const resultsEmail = await db.query(queryEmail, valuesEmail);
-  if (resultsEmail.length > 0) {
-    console.log(`Thank you ${resultsEmail.first_name} for coming back.`)
+  if (resultsEmail.rows[0].email.length > 0) {
+    console.log(`Thank you ${resultsEmail.rows[0].first_name} for coming back.`)
   } else {
-  const query = 'INSERT INTO users(last_name, first_name, email) VALUES($1, $2, $3) RETURNING *'
-  const values = [newUser.last_name, newUser.first_name, newUser.email]
-  const result = await db.query(query, values);
-  console.log('result', result)}
+    console.log('This email does not exist.')
+    const query = 'INSERT INTO users(last_name, first_name, email) VALUES($1, $2, $3) RETURNING *'
+    const values = [newUser.last_name, newUser.first_name, newUser.email]
+    const result = await db.query(query, values);
+    console.log('result', result)}
 });
-
-//TBD: need to check if database already has a user
 
 //A put request - Update a student 
 app.put('/api/students/:studentId', cors(), async (req, res) =>{
