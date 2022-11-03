@@ -49,18 +49,24 @@ app.post('/api/students', cors(), async (req, res) => {
 });
 
 //adding new users from auth0
-
 app.post('/api/me', cors(), async (req, res) => {
   console.log(req.body);
   const newUser = {
-    lastname: req.body.family_name,
-    firstname: req.body.given_name,
+    last_name: req.body.family_name,
+    first_name: req.body.given_name,
     email: req.body.email,
     sub: req.body.sub
   }
-  console.log(newUser);
-  const result = await db.query('INSERT INTO users(lastname, firstname, email, sub) VALUES($1, $2, $3, $4) RETURNING *', [newUser.lastname, newUser.firstname, newUser.email, newUser.sub]);
-  console.log(result.rows[0]);
+  const queryEmail = 'SELECT * FROM users WHERE email=$1 LIMIT 1';
+  const valuesEmail = [newUser.email];
+  const resultsEmail = await db.query(queryEmail, valuesEmail);
+  if (resultsEmail.length > 0) {
+    console.log(`Thank you ${resultsEmail.first_name} for coming back.`)
+  } else {
+  const query = 'INSERT INTO users(last_name, first_name, email) VALUES($1, $2, $3) RETURNING *'
+  const values = [newUser.last_name, newUser.first_name, newUser.email]
+  const result = await db.query(query, values);
+  console.log('result', result)}
 });
 
 //TBD: need to check if database already has a user
