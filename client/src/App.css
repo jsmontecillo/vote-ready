@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+
+
 .App {
   text-align: center;
   font-family: 'BIZ UDPMincho', serif;
+  background-color: rgb(251, 251, 238);
 }
 
 .App-logo {
@@ -67,6 +70,7 @@ span {
 }
 
 .open-links {
-  background-color: rgb(245, 245, 234);
-  height: 300px;
+  background-color: rgb(10, 121, 75);
+  height: 65px;
+  padding: 20px;
 }
