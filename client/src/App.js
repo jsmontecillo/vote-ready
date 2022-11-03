@@ -10,6 +10,7 @@ import Profile from './components/profile';
 import Mission from './mission';
 import Feedback from './components/feedback';
 import Footer from './footer';
+import Saved from './components/saved.js';
 
 function App() {
   const [isClicked, setClicked] = useState(false);
@@ -23,22 +24,25 @@ function App() {
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
-        <NavBar />
+        <div style={{width: "100%"}}>
+          <NavBar />
+        </div>
         {user ? (<Link to="/profile" className="link">YOUR PROFILE</Link>) : (null)}
+        <div className="container flex-grow-1 welcome">
+          {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
+      </div>
       </nav>
       {isClicked ? (<div className="open-links"><Link to="/" className="link">HOME</Link>
         <Link to="/mission" className="link">MISSION</Link>
         <Link to="/locations" className="link">LOCATIONS</Link>
         <Link to="/feedback" className="link">FEEDBACK</Link></div>) : (null)}
-      <div className="container flex-grow-1 welcome">
-          {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
-      </div>
       <Routes>
           <Route path="/" element={<Layout user={user}/>} />
           <Route path="/locations" element={<Locations user={user}/>} />
           <Route path="/profile" element={<Profile user={user}/>} />
           <Route path="/mission" element={<Mission user={user}/>} />
           <Route path="feedback" element={<Feedback user={user}/>} />
+          <Route path="/saved" element={<Saved user={user}/>} />
       </Routes>
       <Footer />
     </div>

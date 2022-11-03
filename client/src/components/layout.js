@@ -9,11 +9,11 @@ import UncontrolledExample from './carousel';
 function Layout(props) {
   return (
     <>
-      <UncontrolledExample />
+        <UncontrolledExample />
       {/*<Header title="VOTE READY" image={la}/>*/}
       <Outlet />
       <div className="description">
-        We protect wildlife because they inspire us. But we also focus our efforts on those species—like tigers, rhinos, whales and marine turtles—whose protection influences and supports the survival of other species or offers the opportunity to protect whole landscapes or marine areas.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit dui vel venenatis dapibus. Etiam eu erat suscipit, accumsan libero sit amet, mollis tortor. Sed quis sodales est. Vestibulum sodales erat a purus venenatis, sit amet hendrerit dolor congue. Integer vestibulum, erat eu hendrerit mollis, elit metus ultrices orci, sed aliquet neque arcu id magna. Sed volutpat libero sit amet aliquet vulputate. Nunc consequat leo viverra facilisis blandit.
         <Contests />
       </div>
     </>

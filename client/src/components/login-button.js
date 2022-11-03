@@ -7,7 +7,7 @@ const LoginButton = () => {
     <button
       className="btn btn-primary btn-block"
       onClick={() => loginWithRedirect()}
-    style={{float: "right", border: "none"}}>
+    style={{border: "1px solid black", backgroundColor: "black"}}>
       Log In
     </button>
   );

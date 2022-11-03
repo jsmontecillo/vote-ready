@@ -118,6 +118,17 @@ app.get("/election", (req,res) => {
 });
 
 
+//get request for favorites
+app.get('/api/saved/:id', cors(), async (req, res) => {
+  try {
+    const { rows: saved } = await db.query(/*'SELECT * JUNCTION TABLE'*/);
+    res.send(saved);
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
+});
+
+
 
 // console.log that your server is up and running
 app.listen(PORT, () => {

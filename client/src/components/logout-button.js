@@ -11,7 +11,7 @@ const LogoutButton = () => {
           returnTo: window.location.origin,
         })
       }
-      style={{float: "right", border: "none"}}>
+      style={{float: "right", border: "none", backgroundColor: "black"}}>
       Log Out
     </button>
   );
