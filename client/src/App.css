@@ -65,3 +65,8 @@ span {
   background-color: green;
   padding: 100px;
 }
+
+.open-links {
+  background-color: rgb(245, 245, 234);
+  height: 300px;
+}

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div className="contact">Instagram</div>
+        <div className="contact">Vote Ready does not support or oppose any political candidate or party.</div>
     )
 }
 

@@ -22,14 +22,14 @@ function App() {
   return (
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
-        {isClicked ? (<><Link to="/" className="link">HOME</Link>
-        <Link to="/mission" className="link">MISSION</Link>
-        <Link to="/locations" className="link">LOCATIONS</Link>
-        <Link to="/feedback" className="link">FEEDBACK</Link></>) : (null)}
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
         <NavBar />
         {user ? (<Link to="/profile" className="link">YOUR PROFILE</Link>) : (null)}
       </nav>
+      {isClicked ? (<div className="open-links"><Link to="/" className="link">HOME</Link>
+        <Link to="/mission" className="link">MISSION</Link>
+        <Link to="/locations" className="link">LOCATIONS</Link>
+        <Link to="/feedback" className="link">FEEDBACK</Link></div>) : (null)}
       <div className="container flex-grow-1 welcome">
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
       </div>
