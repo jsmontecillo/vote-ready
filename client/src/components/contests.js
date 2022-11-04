@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import ContestCard from './contest-card';
 
-const Contests = () => {
+const Contests = (props) => {
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Contests = () => {
         <>
             {contests.map((c) => {
                 return (
-                    <ContestCard contest={c} />
+                    <ContestCard contest={c} user={props.user}/>
                 )
             })}
         </>
