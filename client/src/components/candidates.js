@@ -6,7 +6,7 @@ const Candidates = (props) => {
         <div style={{width: "1200px", display: "flex"}}>
             {candidates.map((c) => {
             return (
-                <CandidateCard candidate={c} contest={props.candidates.ballotTitle}/>
+                <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user}/>
             )
             })}
         </div>
