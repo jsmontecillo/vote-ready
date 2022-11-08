@@ -12,27 +12,13 @@ const PORT = process.env.PORT || 8888;
 app.use(cors());
 app.use(express.json());
 
+
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
   //res.json({ message: 'Hello from My template ExpressJS' });
   res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'));
 });
 
-
-// create the POST request
-// app.post('/api/students', cors(), async (req, res) => {
-//   const newUser = {
-//     firstname: req.body.firstname,
-//     lastname: req.body.lastname,
-//   };
-//   console.log([newUser.firstname, newUser.lastname]);
-//   const result = await db.query(
-//     'INSERT INTO students(firstname, lastname) VALUES($1, $2) RETURNING *',
-//     [newUser.firstname, newUser.lastname],
-//   );
-//   console.log(result.rows[0]);
-//   res.json(result.rows[0]);
-// });
 
 //adding new users from auth0 - done
 app.post('/api/me', cors(), async (req, res) => {
@@ -45,7 +31,7 @@ app.post('/api/me', cors(), async (req, res) => {
   const queryEmail = 'SELECT * FROM users WHERE email=$1 LIMIT 1';
   const valuesEmail = [newUser.email];
   const resultsEmail = await db.query(queryEmail, valuesEmail);
-  if (resultsEmail.rows[0].email.length > 0) {
+  if (resultsEmail.length > 0) {
     console.log(`Thank you ${resultsEmail.rows[0].first_name} for coming back.`)
   } else {
     console.log('This email does not exist.')
@@ -55,31 +41,6 @@ app.post('/api/me', cors(), async (req, res) => {
     console.log('result', result)}
 });
 
-//adding new candidates from api - not done
-app.post('/api/candidate', cors(), async (req, res) => {
-  console.log(req.body);
-  const newCandidate = {
-    name: req.body.name,
-    party: req.body.party,
-    email: req.body.email,
-    phone: req.body.phone,
-    url: req.body.url,
-    facebook: req.body.facebook,
-    twitter: req.body.twitter,
-  }
-  const queryName = 'SELECT * FROM candidates WHERE name=$1 LIMIT 1';
-  const valuesName = [newCandidate.name];
-  const resultsName = await db.query(queryName, valuesName);
-  if (resultsName.rows[0].name.length > 0) {
-    console.log(`Already Exists`)
-  } else {
-    console.log('adding candidate...');
-    // const query = 'INSERT INTO candidates(name, party, email, phone, url, facebook, twitter) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *'
-    // const values = [newCandidate.name, newCandidate.party, newCandidate.email, newCandidate.phone, newCandidate.url, newCandidate.facebook, newCandidate.twitter]
-    // const result = await db.query(query, values);
-    // res.json(result.rows[0]);
-    // console.log('result candidates', result);
-  }});
 
   app.get('/api/candidate', cors(), async (req, res) => {
     try {
@@ -135,11 +96,21 @@ app.get("/election", (req,res) => {
   fetch(url)
   .then((res) => res.json())
   .then((data) => {
+      apiData = data.contests;
        res.send(data);
    })
    .catch((err) => {
        console.log(err);
    });
+});
+
+app.get('/api/users', cors(), async (req, res) => {
+  try {
+    const { rows: users } = await db.query('SELECT * FROM users');
+    res.send(users);
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
 });
 
 //saving candidates
@@ -149,7 +120,7 @@ app.post('/api/saved/:id', cors(), async (req, res) => {
     candidate_id: req.body.candidate_id,
   };
   const result = await db.query(
-    'INSERT INTO saved(email, candidate_id) VALUES($1, $2) RETURNING *',
+    'INSERT INTO saved(user_id, candidate_id) VALUES($1, $2) RETURNING *',
     [newSaved.user_id, newSaved.candidate_id],
   );
   console.log(result.rows[0]);
