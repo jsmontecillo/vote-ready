@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 
 const CandidateCard = (props) => {
     const [users, setUsers] = useState([]);
+    const [savedEntryId, setSavedEntryId] = useState('');
     useEffect(() => {
       fetch("/api/users")
         .then((response) => response.json())
@@ -12,11 +13,22 @@ const CandidateCard = (props) => {
           });
     }, []);
     let foundUser = users.find(el => el.email === props.user.email);
-    const [isSaved, setSaved] = useState(false);
-    const [savedEntryId, setSavedEntryId] = useState('');
+    const [isSaved, setSaved] = useState(() => {
+      if(savedEntryId){
+        return localStorage.getItem(`${savedEntryId}_SAVED`) === 'true';
+      } else {
+        return false;
+      }
+    });
     let candidate = props.candidate;
     let contest = props.contest;
 
+    useEffect(() => {
+      console.log('saved?', isSaved);
+      if(savedEntryId){
+        localStorage.setItem(`${savedEntryId}_SAVED`, JSON.stringify(isSaved));
+      }
+    }, [isSaved])
 
     const handleSaved = async (name) => {
         setSaved(!isSaved);
