@@ -1,24 +1,31 @@
 import './candidate-card.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+
 
 const CandidateCard = (props) => {
     const [isSaved, setSaved] = useState(false);
     const [savedInfo, setSavedInfo] = useState({
         user_id: "",
-        saved: "",
+        candidate_id: "",
     });
     const [savedEntryId, setSavedEntryId] = useState('');
     console.log(props.user);
     let candidate = props.candidate;
     let contest = props.contest;
 
-    //save the candidate from props into database - post request
-
-    console.log("candidate card", candidate);
+    // saveCandidate({
+    //   name: candidate.name,
+    //   party: candidate.party || null,
+    //   email: candidate.email || null,
+    //   phone: candidate.phone || null,
+    //   url: candidate.candidateUrl || null,
+    //   facebook: null,
+    //   twitter: null,
+    // });
 
     const handleSaved = (name) => {
         setSaved(!isSaved);
-        setSavedInfo((savedInfo) => ({user_id: props.user.user_id, saved: name}));
+        setSavedInfo((savedInfo) => ({user_id: props.user.user_id, candidate_id: name}));
         return fetch(`/api/saved/${props.user.user_id}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -34,7 +41,7 @@ const CandidateCard = (props) => {
     }
 
     const handleRemove = async () => {
-      let response = await fetch(`http://localhost:8888/api/saved/${savedEntryId}`, {method: "DELETE"})
+      let response = await fetch(`api/saved/${savedEntryId}`, {method: "DELETE"})
       await response.json();
     }
     return (
