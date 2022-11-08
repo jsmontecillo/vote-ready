@@ -27,7 +27,7 @@ function App() {
         <div style={{width: "100%"}}>
           <NavBar />
         </div>
-        {user ? (<Link to="/profile" className="link">YOUR PROFILE</Link>) : (null)}
+        {user ? (<Link to="/saved" className="link">YOUR SAVED</Link>) : (null)}
         <div className="container flex-grow-1 welcome">
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
       </div>

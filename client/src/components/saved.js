@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 const Saved = (props) => {
     const [contests, setContests] = useState([]);
     const [saved, setSaved] = useState([]);
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         fetch("/election")
@@ -13,18 +14,35 @@ const Saved = (props) => {
     }, []);
 
     useEffect(() => {
-        fetch(`/api/saved/${props.user.user_id}`)
-        .then((response) => response.json())
-        .then((saved) => {
-          setSaved(saved);
-      });
+        fetch('api/users')
+          .then((response) => response.json())
+          .then((users) => {
+                setUsers(users);
+            });
     }, []);
 
-    console.log(contests);
+    console.log(users);
+    let found = users.find((user) => user.email === props.user.email);
+
+    useEffect(() => {
+        if(found){
+            fetch(`/api/saved/${found.id}`)
+            .then((response) => response.json())
+            .then((saved) => {
+              setSaved(saved);
+          });
+        }
+    }, []);
+
+    console.log(saved);
     return (
         <>
-            {contests.map((c) => {
+            <h1>Hello</h1>
+            {/*contests.map((c) => {
                 <h1>{c.ballotTitle}</h1>
+            })*/}
+            {saved.map((c) => {
+                <h1>Hi</h1>
             })}
         </>
     )
