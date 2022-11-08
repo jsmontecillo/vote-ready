@@ -1,17 +1,21 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const path = require('path');
 const db = require('./db/db-connection.js');
 
 const app = express();
+const REACT_BUILD_DIR = path.join(__dirname, '..', 'client', 'build');
+app.use(express.static(REACT_BUILD_DIR));
 
-const PORT = 8888;
+const PORT = process.env.PORT || 8888;
 app.use(cors());
 app.use(express.json());
 
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello from My template ExpressJS' });
+  //res.json({ message: 'Hello from My template ExpressJS' });
+  res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'));
 });
 
 
@@ -50,6 +54,41 @@ app.post('/api/me', cors(), async (req, res) => {
     const result = await db.query(query, values);
     console.log('result', result)}
 });
+
+//adding new candidates from api - not done
+app.post('/api/candidate', cors(), async (req, res) => {
+  console.log(req.body);
+  const newCandidate = {
+    name: req.body.name,
+    party: req.body.party,
+    email: req.body.email,
+    phone: req.body.phone,
+    url: req.body.url,
+    facebook: req.body.facebook,
+    twitter: req.body.twitter,
+  }
+  const queryName = 'SELECT * FROM candidates WHERE name=$1 LIMIT 1';
+  const valuesName = [newCandidate.name];
+  const resultsName = await db.query(queryName, valuesName);
+  if (resultsName.rows[0].name.length > 0) {
+    console.log(`Already Exists`)
+  } else {
+    console.log('adding candidate...');
+    // const query = 'INSERT INTO candidates(name, party, email, phone, url, facebook, twitter) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *'
+    // const values = [newCandidate.name, newCandidate.party, newCandidate.email, newCandidate.phone, newCandidate.url, newCandidate.facebook, newCandidate.twitter]
+    // const result = await db.query(query, values);
+    // res.json(result.rows[0]);
+    // console.log('result candidates', result);
+  }});
+
+  app.get('/api/candidate', cors(), async (req, res) => {
+    try {
+      const { rows: candidates } = await db.query('SELECT * FROM candidates');
+      res.send(candidates);
+    } catch (e) {
+      return res.status(400).json({ e });
+    }
+  });
 
 // //A put request - Update a student 
 // app.put('/api/students/:studentId', cors(), async (req, res) =>{
@@ -122,13 +161,19 @@ app.post('/api/saved/:id', cors(), async (req, res) => {
 app.get('/api/saved/:id', cors(), async (req, res) => {
   const user_id = req.params.id;
   try {
-    const { rows: saved } = await db.query('SELECT candidates.* FROM candidates INNER JOIN saved ON candidates.id=saved.candidates_id WHERE saved.user_id=$1', [user_id]);
+    const { rows: saved } = await db.query('SELECT candidates.* FROM candidates INNER JOIN saved ON candidates.name=saved.candidates_id WHERE saved.user_id=$1', [user_id]);
     res.send(saved);
   } catch (e) {
     return res.status(400).json({ e });
   }
 });
 
+//delete request
+app.delete(`/api/saved/:id`, cors(), async(req,res) => {
+  const savedId = req.params.id;
+  await db.query('DELETE FROM saved WHERE id=$1', [savedId]);
+  res.status(200).end();
+});
 
 
 // console.log that your server is up and running

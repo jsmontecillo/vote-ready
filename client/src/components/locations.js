@@ -9,7 +9,7 @@ const Locations = (props) => {
     const [data, setData] = useState(locations);
 
     useEffect(() => {
-        fetch('http://localhost:8888/election')
+        fetch('/election')
         .then((response) => response.json())
         .then((data) => {
                 console.log(data.pollingLocations);
