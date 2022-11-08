@@ -20,9 +20,8 @@ const Saved = (props) => {
                 setUsers(users);
             });
     }, []);
-
-    console.log(users);
     let found = users.find((user) => user.email === props.user.email);
+    console.log("found?", found.id || null)
 
     useEffect(() => {
         if(found){
@@ -42,7 +41,7 @@ const Saved = (props) => {
                 <h1>{c.ballotTitle}</h1>
             })*/}
             {saved.map((c) => {
-                <h1>Hi</h1>
+                return(<h1>Hi</h1>)
             })}
         </>
     )
