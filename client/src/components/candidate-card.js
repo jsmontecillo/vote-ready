@@ -3,30 +3,26 @@ import {useState, useEffect} from 'react';
 
 
 const CandidateCard = (props) => {
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+      fetch("/api/users")
+        .then((response) => response.json())
+        .then((users) => {
+              setUsers(users);
+          });
+    }, []);
+    let foundUser = users.find(el => el.email === props.user.email);
     const [isSaved, setSaved] = useState(false);
-    const [savedInfo, setSavedInfo] = useState({
-        user_id: "",
-        candidate_id: "",
-    });
     const [savedEntryId, setSavedEntryId] = useState('');
-    console.log(props.user);
     let candidate = props.candidate;
     let contest = props.contest;
 
-    // saveCandidate({
-    //   name: candidate.name,
-    //   party: candidate.party || null,
-    //   email: candidate.email || null,
-    //   phone: candidate.phone || null,
-    //   url: candidate.candidateUrl || null,
-    //   facebook: null,
-    //   twitter: null,
-    // });
 
-    const handleSaved = (name) => {
+    const handleSaved = async (name) => {
         setSaved(!isSaved);
-        setSavedInfo((savedInfo) => ({user_id: props.user.user_id, candidate_id: name}));
-        return fetch(`/api/saved/${props.user.user_id}`, {
+        let savedInfo = {user_id: foundUser.id, candidate_id: name};
+        console.log(savedInfo);
+        return await fetch(`/api/saved/${foundUser.id}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(savedInfo),
@@ -40,7 +36,10 @@ const CandidateCard = (props) => {
             });
     }
 
+    console.log(savedEntryId);
+
     const handleRemove = async () => {
+      setSaved(!isSaved);
       let response = await fetch(`api/saved/${savedEntryId}`, {method: "DELETE"})
       await response.json();
     }
