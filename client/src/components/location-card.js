@@ -1,8 +1,13 @@
 import {useState} from 'react';
 
 const LocationCard = (props) => {
+    let location = props.location;
     return (
-        <h1>name</h1>
+        <div className="location-card">
+            <strong>{location.address.locationName}</strong><br/>
+            {location.address.city}<br/>
+            Hours: {location.pollingHours}<br/>
+        </div>
     )
 }
 
