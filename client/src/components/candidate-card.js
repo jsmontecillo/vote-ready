@@ -12,7 +12,11 @@ const CandidateCard = (props) => {
               setUsers(users);
           });
     }, []);
-    let foundUser = users.find(el => el.email === props.user.email);
+    let foundUser;
+    if(props.user){
+      foundUser = users.find(el => el.email === props.user.email);
+    };
+
     const [isSaved, setSaved] = useState(() => {
       if(savedEntryId){
         return localStorage.getItem(`${savedEntryId}_SAVED`) === 'true';
@@ -32,20 +36,21 @@ const CandidateCard = (props) => {
 
     const handleSaved = async (name) => {
         setSaved(!isSaved);
-        let savedInfo = {user_id: foundUser.id, candidate_id: name};
-        console.log(savedInfo);
-        return await fetch(`/api/saved/${foundUser.id}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(savedInfo),
-          })
-            .then((response) => {
-              return response.json();
+        if(props.user){
+          let savedInfo = {user_id: foundUser.id, candidate_id: name};
+          return await fetch(`/api/saved/${foundUser.id}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(savedInfo),
             })
-            .then((data) => {
-              console.log("From the post ", data);
-              setSavedEntryId(data.id);
-            });
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                console.log("From the post ", data);
+                setSavedEntryId(data.id);
+              });
+        }
     }
 
     console.log(savedEntryId);

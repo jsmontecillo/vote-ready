@@ -21,7 +21,7 @@ const Saved = (props) => {
             });
     }, []);
     let found = users.find((user) => user.email === props.user.email);
-    console.log("found?", found.id || null)
+    console.log("found?", found || null)
 
     useEffect(() => {
         if(found){
@@ -29,11 +29,9 @@ const Saved = (props) => {
             .then((response) => response.json())
             .then((saved) => {
               setSaved(saved);
-          });
-        }
-    }, []);
-
-    console.log(saved);
+          });}
+    }, [saved]);
+    
     return (
         <>
             <h1>Hello</h1>
