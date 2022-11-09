@@ -53,7 +53,6 @@ const CandidateCard = (props) => {
         }
     }
 
-    console.log(savedEntryId);
 
     const handleRemove = async () => {
       setSaved(!isSaved);

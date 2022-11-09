@@ -20,7 +20,7 @@ const Saved = (props) => {
           .then((users) => {
                 setUsers(users);
             });
-    }, []);
+    }, [users]);
     let found = users.find((user) => user.email === props.user.email);
 
     useEffect(() => {
@@ -28,18 +28,20 @@ const Saved = (props) => {
             fetch(`/api/saved/${found.id}`)
             .then((response) => response.json())
             .then((saved) => {
-              setSaved(saved);
-          });}
-    }, [saved]);
-    console.log(saved);
+                setSaved(saved);
+            });
+        }
+    }, [found, saved]);
+
 
     return (
         <>
+            <h1>Your Saved Candidates</h1>
             {/*contests.map((c) => {
                 <h1>{c.ballotTitle}</h1>
             })*/}
             {saved.map((c) => {
-                return(<CandidateCard candidate={c} user={found}/>)
+                return(<CandidateCard candidate={c}/>)
             })}
         </>
     )
