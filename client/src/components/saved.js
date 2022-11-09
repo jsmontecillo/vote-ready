@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import CandidateCard from './candidate-card';
 
 const Saved = (props) => {
     const [contests, setContests] = useState([]);
@@ -21,7 +22,6 @@ const Saved = (props) => {
             });
     }, []);
     let found = users.find((user) => user.email === props.user.email);
-    console.log("found?", found || null)
 
     useEffect(() => {
         if(found){
@@ -31,15 +31,15 @@ const Saved = (props) => {
               setSaved(saved);
           });}
     }, [saved]);
-    
+    console.log(saved);
+
     return (
         <>
-            <h1>Hello</h1>
             {/*contests.map((c) => {
                 <h1>{c.ballotTitle}</h1>
             })*/}
             {saved.map((c) => {
-                return(<h1>Hi</h1>)
+                return(<CandidateCard candidate={c} user={found}/>)
             })}
         </>
     )

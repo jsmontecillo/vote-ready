@@ -66,8 +66,7 @@ const CandidateCard = (props) => {
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>
             <p>{candidate.phone || null}</p>
-            <p>{candidate.email || null}</p>
-            <p>{candidate.candidateUrl || null}</p>
+            <p>{candidate.candidateUrl || candidate.url}</p>
 
         </div>
     )
