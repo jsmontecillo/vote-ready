@@ -60,7 +60,7 @@ const CandidateCard = (props) => {
       await response.json();
     }
     return (
-        <div className="card">
+        <div className="candidate-card">
             {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(candidate.name)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>
