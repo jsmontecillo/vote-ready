@@ -24,6 +24,7 @@ function App() {
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
+        <div className="title">LA CHOOSES</div>
         <div style={{width: "100%"}}>
           <NavBar />
         </div>
