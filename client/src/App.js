@@ -25,13 +25,13 @@ function App() {
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
         <div className="title">LA CHOOSES</div>
+        {!user ? <span className="welcome">Welcome!</span> : <span className="welcome">Hello, {user.given_name}.</span>}
         <div className="login"><NavBar /></div>
         <hr style={{marginTop: "-9px"}}/>
         <hr style={{marginTop: "-10px"}}/>
-        {user ? (<Link to="/saved" className="link">YOUR SAVED</Link>) : (null)}
         <div className="welcome">
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
-      </div>
+        </div>
       </nav>
       <>
         <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
@@ -44,6 +44,7 @@ function App() {
               <li><a className="sd-link"><Link to="/mission" className="link">MISSION</Link></a></li>
               <li><a className="sd-link"><Link to="/locations" className="link">LOCATIONS</Link></a></li>
               <li><a className="sd-link"><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
+              {user ? (<li><a className="sd-link"><Link to="/saved" className="link">YOUR SAVED</Link></a></li>) : (null)}
             </ul>
           </div>
         </div>
