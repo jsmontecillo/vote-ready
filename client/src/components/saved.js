@@ -6,7 +6,6 @@ const Saved = (props) => {
     const [saved, setSaved] = useState([]);
     const [users, setUsers] = useState([]);
     const [savedEntries, setSavedEntries] = useState([]);
-    const [currentSavedEntry, setCurrentSavedEntry] = useState(null);
 
     useEffect(() => {
         fetch('/election')
@@ -45,25 +44,23 @@ const Saved = (props) => {
             if(entry.user_id === found.id) return entry;
         });
 
-        let alreadySaved = currentUser.map((entry) => {
+        let alreadySaved = currentUser.filter((entry) => {
             if(c){
-                console.log(c);
                 if(entry.candidate_id === c.candidate_id){
-                    console.log(entry.id);
-                    //TO DO FIX STATE
-                    //setCurrentSavedEntry(() => entry.id);
                     return true;
                 }
             }
         });
+        return alreadySaved[0].id;
     }
 
     return (
         <>
             <h1>Your Saved Candidates</h1>
             {saved.map((c) => {    
-                findingEntry(c);                       
-                return(<SavedCard candidate={c} savedEntry={currentSavedEntry} />)
+                let currentEntry = findingEntry(c);
+                console.log(currentEntry);                       
+                return(<SavedCard candidate={c} savedEntry={currentEntry} />)
             })}
         </>
     )
