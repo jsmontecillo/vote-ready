@@ -5,6 +5,7 @@ import la3 from './la3.webp';
 
 function UncontrolledExample() {
   return (
+    <div className="">
     <Carousel>
       <Carousel.Item>
         <img
@@ -47,6 +48,7 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </div>
   );
 }
 

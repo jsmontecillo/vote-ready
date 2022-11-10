@@ -24,18 +24,32 @@ function App() {
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
-        <div style={{width: "100%"}}>
-          <NavBar />
-        </div>
-        {user ? (<Link to="/saved" className="link">YOUR SAVED</Link>) : (null)}
-        <div className="container flex-grow-1 welcome">
+        <div className="title">LA CHOOSES</div>
+        {!user ? <span className="welcome">Welcome!</span> : <span className="welcome">Hello, {user.given_name}.</span>}
+        <div className="login"><NavBar /></div>
+        <hr style={{marginTop: "-9px"}}/>
+        <hr style={{marginTop: "-10px"}}/>
+        <div className="welcome">
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
-      </div>
+        </div>
       </nav>
-      {isClicked ? (<div className="open-links"><Link to="/" className="link">HOME</Link>
-        <Link to="/mission" className="link">MISSION</Link>
-        <Link to="/locations" className="link">LOCATIONS</Link>
-        <Link to="/feedback" className="link">FEEDBACK</Link></div>) : (null)}
+      <>
+        <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
+          <div className="sd-header">
+            <div className="btn btn-primary" onClick={() => setClicked(!isClicked)}><i className="fa fa-times">X</i></div>
+          </div>
+          <div className="sd-body">
+            <ul>
+              <li><a className="sd-link"><Link to="/" className="link">HOME</Link></a></li>
+              <li><a className="sd-link"><Link to="/mission" className="link">MISSION</Link></a></li>
+              <li><a className="sd-link"><Link to="/locations" className="link">LOCATIONS</Link></a></li>
+              <li><a className="sd-link"><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
+              {user ? (<li><a className="sd-link"><Link to="/saved" className="link">YOUR SAVED</Link></a></li>) : (null)}
+            </ul>
+          </div>
+        </div>
+        <div className={`sidebar-overlay ${isClicked == true ? 'active' : ''}`} onClick={() => setClicked(!isClicked)}></div>
+      </>
       <Routes>
           <Route path="/" element={<Layout user={user}/>} />
           <Route path="/locations" element={<Locations user={user}/>} />

@@ -74,10 +74,26 @@ app.get("/election", (req,res) => {
    });
 });
 
+app.get('/election-data.json', (req, res) => {
+  console.log(res)
+
+  /* Just send the file */
+  res.sendFile(path.join(__dirname, '/election-data.json'));
+});
+
 app.get('/api/users', cors(), async (req, res) => {
   try {
     const { rows: users } = await db.query('SELECT * FROM users');
     res.send(users);
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
+});
+
+app.get('/api/saved', cors(), async (req, res) => {
+  try {
+    const { rows: allSaved } = await db.query('SELECT * FROM saved');
+    res.send(allSaved);
   } catch (e) {
     return res.status(400).json({ e });
   }
@@ -103,7 +119,7 @@ app.get('/api/saved/:id', cors(), async (req, res) => {
   const user_id = req.params.id;
   console.log(user_id);
   try {
-    const { rows: saved } = await db.query('SELECT * FROM saved INNER JOIN candidates ON saved.candidate_id = candidates.name INNER JOIN users ON saved.user_id = users.id WHERE saved.user_id = $1', [user_id]);
+    const { rows: saved } = await db.query('SELECT * FROM saved INNER JOIN candidates ON saved.candidate_id = candidates.id INNER JOIN users ON saved.user_id = users.id WHERE saved.user_id = $1', [user_id]);
     res.send(saved);
   } catch (e) {
     return res.status(400).json({ e });

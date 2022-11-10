@@ -1,14 +1,26 @@
 import CandidateCard from './candidate-card';
-
+import {useEffect, useState} from 'react';
 
 const Candidates = (props) => {
-    let candidates = props.candidates.candidates;
+    const contestCandidates = props.candidates.candidates;
+    const [candidates, setCandidates] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/candidate")
+          .then((response) => response.json())
+          .then((candidates) => {
+                setCandidates(candidates);
+            });
+    }, []);
 
     return (
         <div style={{width: "1200px", display: "flex"}}>
-            {candidates.map((c) => {
+            {contestCandidates.map((c) => {
+                let thisCandidate = candidates.find((can) => {
+                    return can.name.toLowerCase() === c.name.toLowerCase();
+                });
             return (
-                <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user}/>
+                <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate}/>
             )
             })}
         </div>
