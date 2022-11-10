@@ -11,7 +11,7 @@ const Candidates = (props) => {
           .then((candidates) => {
                 setCandidates(candidates);
             });
-    }, [candidates]);
+    }, []);
 
     return (
         <div style={{width: "1200px", display: "flex"}}>
