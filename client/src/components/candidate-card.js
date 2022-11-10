@@ -12,7 +12,11 @@ const CandidateCard = (props) => {
               setUsers(users);
           });
     }, []);
-    let foundUser = users.find(el => el.email === props.user.email);
+    let foundUser;
+    if(props.user){
+      foundUser = users.find(el => el.email === props.user.email);
+    };
+
     const [isSaved, setSaved] = useState(() => {
       if(savedEntryId){
         return localStorage.getItem(`${savedEntryId}_SAVED`) === 'true';
@@ -32,23 +36,23 @@ const CandidateCard = (props) => {
 
     const handleSaved = async (name) => {
         setSaved(!isSaved);
-        let savedInfo = {user_id: foundUser.id, candidate_id: name};
-        console.log(savedInfo);
-        return await fetch(`/api/saved/${foundUser.id}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(savedInfo),
-          })
-            .then((response) => {
-              return response.json();
+        if(props.user){
+          let savedInfo = {user_id: foundUser.id, candidate_id: name};
+          return await fetch(`/api/saved/${foundUser.id}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(savedInfo),
             })
-            .then((data) => {
-              console.log("From the post ", data);
-              setSavedEntryId(data.id);
-            });
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                console.log("From the post ", data);
+                setSavedEntryId(data.id);
+              });
+        }
     }
 
-    console.log(savedEntryId);
 
     const handleRemove = async () => {
       setSaved(!isSaved);
@@ -56,13 +60,12 @@ const CandidateCard = (props) => {
       await response.json();
     }
     return (
-        <div className="card">
+        <div className="candidate-card">
             {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(candidate.name)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>
             <p>{candidate.phone || null}</p>
-            <p>{candidate.email || null}</p>
-            <p>{candidate.candidateUrl || null}</p>
+            <p>{candidate.candidateUrl || candidate.url}</p>
 
         </div>
     )

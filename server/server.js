@@ -31,7 +31,7 @@ app.post('/api/me', cors(), async (req, res) => {
   const queryEmail = 'SELECT * FROM users WHERE email=$1 LIMIT 1';
   const valuesEmail = [newUser.email];
   const resultsEmail = await db.query(queryEmail, valuesEmail);
-  if (resultsEmail.length > 0) {
+  if (resultsEmail.rows[0].email.length > 0) {
     console.log(`Thank you ${resultsEmail.rows[0].first_name} for coming back.`)
   } else {
     console.log('This email does not exist.')
@@ -101,8 +101,9 @@ app.post('/api/saved/:id', cors(), async (req, res) => {
 //get request for favorites with junction table, saved table, candidates table, and users table
 app.get('/api/saved/:id', cors(), async (req, res) => {
   const user_id = req.params.id;
+  console.log(user_id);
   try {
-    const { rows: saved } = await db.query('SELECT candidates.* FROM candidates INNER JOIN saved ON candidates.name=saved.candidates_id WHERE saved.user_id=$1', [user_id]);
+    const { rows: saved } = await db.query('SELECT * FROM saved INNER JOIN candidates ON saved.candidate_id = candidates.name INNER JOIN users ON saved.user_id = users.id WHERE saved.user_id = $1', [user_id]);
     res.send(saved);
   } catch (e) {
     return res.status(400).json({ e });
