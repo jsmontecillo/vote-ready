@@ -1,6 +1,9 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 const SavedCard = (props) => {
+    let candidate = props.candidate;
+    let entry = props.savedEntry;
+    
     const handleRemove = async (entryId) => {
         let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
         await response.json();

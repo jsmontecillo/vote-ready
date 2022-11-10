@@ -36,7 +36,6 @@ const CandidateCard = (props) => {
             if(entry.user_id === foundUser.id) return entry;
            });
           let alreadySaved = currentUser.map((entry) => {
-            console.log(entry);
             if(props.candidateId){
               if(entry.candidate_id === props.candidateId.id){
                 setIsSaved(true);
