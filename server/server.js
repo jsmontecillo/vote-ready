@@ -83,6 +83,15 @@ app.get('/api/users', cors(), async (req, res) => {
   }
 });
 
+app.get('/api/saved', cors(), async (req, res) => {
+  try {
+    const { rows: allSaved } = await db.query('SELECT * FROM saved');
+    res.send(allSaved);
+  } catch (e) {
+    return res.status(400).json({ e });
+  }
+});
+
 //saving candidates
 app.post('/api/saved/:id', cors(), async (req, res) => {
   const newSaved = {

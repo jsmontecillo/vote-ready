@@ -5,29 +5,39 @@ import {useState, useEffect} from 'react';
 const CandidateCard = (props) => {
     const [users, setUsers] = useState([]);
     const [savedEntryId, setSavedEntryId] = useState('');
+    const [isSaved, setIsSaved] = useState(false); //TODO
+    const [saved, setSaved] = useState([]);
     useEffect(() => {
-      fetch("/api/users")
+      fetch('/api/users')
         .then((response) => response.json())
         .then((users) => {
               setUsers(users);
           });
-
-      //TODO FETCH
     }, []);
 
+    //searching for user currently logged in
     let foundUser;
     if(props.user){
       foundUser = users.find(el => el.email === props.user.email);
     };
 
-  
+    useEffect(() => {
+      fetch('/api/saved')
+        .then((response) => response.json())
+        .then((saved) => {
+          setSaved(saved);
+      })
 
-    const [isSaved, setSaved] = useState(false); //TODO
+    }, [])
+
+    console.log(saved);
+
+    //saving props
     let candidate = props.candidate;
     let contest = props.contest;
 
     const handleSaved = async (id) => {
-        setSaved(!isSaved);
+        setIsSaved(!isSaved);
         if(props.user){
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
           return await fetch(`/api/saved/${foundUser.id}`, {
@@ -46,13 +56,13 @@ const CandidateCard = (props) => {
     }
 
     const handleRemove = async () => {
-      setSaved(!isSaved);
+      setIsSaved(!isSaved);
       let response = await fetch(`api/saved/${savedEntryId}`, {method: "DELETE"})
       await response.json();
     }
     return (
         <div className="candidate-card">
-            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(props.candidateId)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
             {props.saved ? (<button type="button" onClick={() => handleRemove()}>-</button>):(null)}
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>

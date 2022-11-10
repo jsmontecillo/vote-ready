@@ -11,14 +11,14 @@ const Candidates = (props) => {
           .then((candidates) => {
                 setCandidates(candidates);
             });
-    }, []);
+    }, [candidates]);
 
     return (
         <div style={{width: "1200px", display: "flex"}}>
             {contestCandidates.map((c) => {
                 let thisCandidate = candidates.find((can) => can.name === c.name);
             return (
-                <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate.id}/>
+                <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate}/>
             )
             })}
         </div>

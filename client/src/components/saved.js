@@ -7,11 +7,12 @@ const Saved = (props) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("/election")
+        fetch('/election')
           .then((response) => response.json())
           .then((users) => {
-                setContests(users.contests);
-            });
+            setContests(users.contests);
+        });
+          
     }, []);
 
     useEffect(() => {
