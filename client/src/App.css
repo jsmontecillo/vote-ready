@@ -4,8 +4,8 @@
 
 .App {
   text-align: center;
-  font-family: 'BIZ UDPMincho', serif;
-  background-color: rgb(251, 251, 238);
+  font-family: 'Xanh Mono', monospace;
+  background-color: rgb(187, 187, 185);
 }
 
 .App-logo {
@@ -53,17 +53,16 @@ span {
   -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
   -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
   box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  height: 140px;
+  margin-bottom: 10px;
+  font-family: 'Xanh Mono', monospace;
 }
 
 .menu {
-  color: white;
+  color: green;
   font-size: 16px;
 }
 
-.menu:hover {
-  font-size: 18px;
-  transition: 1s ease;
-}
 
 .contact {
   background-color: green;
@@ -71,13 +70,27 @@ span {
 }
 
 .open-links {
-  background-color: rgb(10, 121, 75);
+  background-color: rgb(186, 192, 150);
   height: 65px;
   padding: 20px;
 }
 
 .title {
   font-family: 'Xanh Mono', monospace;
-  color: white;
-  font-size: 30px;
+  color: green;
+  font-size: 40px;
+  text-shadow: 1px 1px rgb(186, 192, 150);
+}
+
+.login {
+  margin-top: -60px;
+  margin-right: -90px;
+}
+
+hr {
+  color: green;
+}
+
+.welcome {
+  color: green;
 }

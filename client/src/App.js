@@ -25,11 +25,11 @@ function App() {
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
         <div className="title">LA CHOOSES</div>
-        <div style={{width: "100%"}}>
-          <NavBar />
-        </div>
+        <div className="login"><NavBar /></div>
+        <hr style={{marginTop: "-9px"}}/>
+        <hr style={{marginTop: "-10px"}}/>
         {user ? (<Link to="/saved" className="link">YOUR SAVED</Link>) : (null)}
-        <div className="container flex-grow-1 welcome">
+        <div className="welcome">
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
       </div>
       </nav>
