@@ -45,11 +45,12 @@ const Saved = (props) => {
         });
 
         let alreadySaved = currentUser.filter((entry) => {
-            if(c){
+            if(c && entry){
                 if(entry.candidate_id === c.candidate_id){
                     return true;
-                }
+                }                
             }
+
         });
         return alreadySaved[0].id;
     }

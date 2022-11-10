@@ -40,7 +40,7 @@ const CandidateCard = (props) => {
            });
            if(currentUser.length > 0){
             let alreadySaved = currentUser.map((entry) => {
-              if(props.candidateId){
+              if(props.candidateId && entry){
                 if(entry.candidate_id === props.candidateId.id){
                   setIsSaved(true);
                   setSavedEntryId(entry.id);
