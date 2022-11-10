@@ -53,6 +53,7 @@ const CandidateCard = (props) => {
 
     const handleSaved = async (id) => {
       console.log(foundUser);
+      setIsSaved(!isSaved);
         if(props.user && foundUser){
           console.log(id)
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
@@ -73,6 +74,7 @@ const CandidateCard = (props) => {
 
     //TODO: GET ENTRYID FROM DATABASE
     const handleRemove = async (entryId) => {
+      setIsSaved(!isSaved);
       let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
       await response.json();
     }
