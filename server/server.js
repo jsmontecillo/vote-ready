@@ -74,6 +74,13 @@ app.get("/election", (req,res) => {
    });
 });
 
+app.get('/election-data.json', (req, res) => {
+  console.log(res)
+
+  /* Just send the file */
+  res.sendFile(path.join(__dirname, '/election-data.json'));
+});
+
 app.get('/api/users', cors(), async (req, res) => {
   try {
     const { rows: users } = await db.query('SELECT * FROM users');

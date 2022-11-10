@@ -34,7 +34,7 @@ const CandidateCard = (props) => {
     }
     console.log(foundUser);
         //check if user has saved candidate already
-        if(props.user){
+        if(props.user && foundUser){
           let currentUser = saved.filter((entry) => {
             return entry.user_id === foundUser.id;
            });
