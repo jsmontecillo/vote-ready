@@ -26,10 +26,10 @@ const CandidateCard = (props) => {
     let candidate = props.candidate;
     let contest = props.contest;
 
-    const handleSaved = async (name) => {
+    const handleSaved = async (id) => {
         setSaved(!isSaved);
         if(props.user){
-          let savedInfo = {user_id: foundUser.id, candidate_id: name};
+          let savedInfo = {user_id: foundUser.id, candidate_id: id};
           return await fetch(`/api/saved/${foundUser.id}`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ const CandidateCard = (props) => {
     }
     return (
         <div className="candidate-card">
-            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(candidate.name)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(props.candidateId)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
             {props.saved ? (<button type="button" onClick={() => handleRemove()}>-</button>):(null)}
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>
