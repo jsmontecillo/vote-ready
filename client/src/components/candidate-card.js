@@ -11,28 +11,20 @@ const CandidateCard = (props) => {
         .then((users) => {
               setUsers(users);
           });
+
+      //TODO FETCH
     }, []);
+
     let foundUser;
     if(props.user){
       foundUser = users.find(el => el.email === props.user.email);
     };
 
-    const [isSaved, setSaved] = useState(() => {
-      if(savedEntryId){
-        return localStorage.getItem(`${savedEntryId}_SAVED`) === 'true';
-      } else {
-        return false;
-      }
-    });
+  
+
+    const [isSaved, setSaved] = useState(false); //TODO
     let candidate = props.candidate;
     let contest = props.contest;
-
-    useEffect(() => {
-      console.log('saved?', isSaved);
-      if(savedEntryId){
-        localStorage.setItem(`${savedEntryId}_SAVED`, JSON.stringify(isSaved));
-      }
-    }, [isSaved])
 
     const handleSaved = async (name) => {
         setSaved(!isSaved);
@@ -53,7 +45,6 @@ const CandidateCard = (props) => {
         }
     }
 
-
     const handleRemove = async () => {
       setSaved(!isSaved);
       let response = await fetch(`api/saved/${savedEntryId}`, {method: "DELETE"})
@@ -62,6 +53,7 @@ const CandidateCard = (props) => {
     return (
         <div className="candidate-card">
             {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove() : handleSaved(candidate.name)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+            {props.saved ? (<button type="button" onClick={() => handleRemove()}>-</button>):(null)}
             <h4>{candidate.name}</h4>
             <h4>{candidate.party ? candidate.party : null}</h4>
             <p>{candidate.phone || null}</p>

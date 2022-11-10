@@ -36,8 +36,7 @@ function App() {
       <>
         <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
           <div className="sd-header">
-            <h4 className="mb-0">Sidebar Header</h4>
-            <div className="btn btn-primary" onClick={() => setClicked(!isClicked)}><i className="fa fa-times"></i></div>
+            <div className="btn btn-primary" onClick={() => setClicked(!isClicked)}><i className="fa fa-times">X</i></div>
           </div>
           <div className="sd-body">
             <ul>
@@ -45,10 +44,6 @@ function App() {
               <li><a className="sd-link"><Link to="/mission" className="link">MISSION</Link></a></li>
               <li><a className="sd-link"><Link to="/locations" className="link">LOCATIONS</Link></a></li>
               <li><a className="sd-link"><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
-              <li><a className="sd-link">Menu Item 5</a></li>
-              <li><a className="sd-link">Menu Item 6</a></li>
-              <li><a className="sd-link">Menu Item 7</a></li>
-              <li><a className="sd-link">Menu Item 8</a></li>
             </ul>
           </div>
         </div>

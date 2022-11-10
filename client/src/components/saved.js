@@ -41,7 +41,7 @@ const Saved = (props) => {
                 <h1>{c.ballotTitle}</h1>
             })*/}
             {saved.map((c) => {
-                return(<CandidateCard candidate={c}/>)
+                return(<CandidateCard candidate={c} saved={true} /*props=entryID*//>)
             })}
         </>
     )
