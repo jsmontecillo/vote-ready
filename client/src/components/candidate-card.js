@@ -20,30 +20,36 @@ const CandidateCard = (props) => {
           });
     }, []);
 
-      //searching for user currently logged in
     let foundUser;
-    if(props.user){
-      foundUser = users.find(el => el.email === props.user.email);
-    }
     useEffect(() => {
       fetch('/api/saved')
         .then((response) => response.json())
         .then((saved) => {
           setSaved(saved);
       });
+            //searching for user currently logged in
+
+    if(props.user){
+      foundUser = users.find(el => el.email === props.user.email);
+    }
+    console.log(foundUser);
         //check if user has saved candidate already
-          let currentUser = saved.map((entry) => {
-            if(entry.user_id === foundUser.id) return entry;
+        if(props.user){
+          let currentUser = saved.filter((entry) => {
+            return entry.user_id === foundUser.id;
            });
-          let alreadySaved = currentUser.map((entry) => {
-            if(props.candidateId){
-              if(entry.candidate_id === props.candidateId.id){
-                setIsSaved(true);
-                setSavedEntryId(entry.id);
-                return true;
+           if(currentUser.length > 0){
+            let alreadySaved = currentUser.map((entry) => {
+              if(props.candidateId){
+                if(entry.candidate_id === props.candidateId.id){
+                  setIsSaved(true);
+                  setSavedEntryId(entry.id);
+                  return true;
+                }
               }
-            }
-          });
+            });
+            }         
+          }
     }, [saved.length, foundUser]);   
 
     const handleSaved = async (id) => {
