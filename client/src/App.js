@@ -33,10 +33,27 @@ function App() {
           {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
       </div>
       </nav>
-      {isClicked ? (<div className="open-links"><Link to="/" className="link">HOME</Link>
-        <Link to="/mission" className="link">MISSION</Link>
-        <Link to="/locations" className="link">LOCATIONS</Link>
-        <Link to="/feedback" className="link">FEEDBACK</Link></div>) : (null)}
+      <>
+        <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
+          <div className="sd-header">
+            <h4 className="mb-0">Sidebar Header</h4>
+            <div className="btn btn-primary" onClick={() => setClicked(!isClicked)}><i className="fa fa-times"></i></div>
+          </div>
+          <div className="sd-body">
+            <ul>
+              <li><a className="sd-link"><Link to="/" className="link">HOME</Link></a></li>
+              <li><a className="sd-link"><Link to="/mission" className="link">MISSION</Link></a></li>
+              <li><a className="sd-link"><Link to="/locations" className="link">LOCATIONS</Link></a></li>
+              <li><a className="sd-link"><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
+              <li><a className="sd-link">Menu Item 5</a></li>
+              <li><a className="sd-link">Menu Item 6</a></li>
+              <li><a className="sd-link">Menu Item 7</a></li>
+              <li><a className="sd-link">Menu Item 8</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className={`sidebar-overlay ${isClicked == true ? 'active' : ''}`} onClick={() => setClicked(!isClicked)}></div>
+      </>
       <Routes>
           <Route path="/" element={<Layout user={user}/>} />
           <Route path="/locations" element={<Locations user={user}/>} />
