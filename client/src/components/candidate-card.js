@@ -40,6 +40,7 @@ const CandidateCard = (props) => {
             if(props.candidateId){
               if(entry.candidate_id === props.candidateId.id){
                 setIsSaved(true);
+                setSavedEntryId(entry.id);
                 return true;
               }
             }
@@ -59,11 +60,11 @@ const CandidateCard = (props) => {
               })
               .then((data) => {
                 console.log("From the post ", data);
-                setSavedEntryId(data.id);
               });
         }
     }
 
+    //TODO: GET ENTRYID FROM DATABASE
     const handleRemove = async (entryId) => {
       let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
       await response.json();
