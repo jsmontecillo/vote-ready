@@ -16,7 +16,9 @@ const Candidates = (props) => {
     return (
         <div style={{width: "1200px", display: "flex"}}>
             {contestCandidates.map((c) => {
-                let thisCandidate = candidates.find((can) => can.name === c.name);
+                let thisCandidate = candidates.find((can) => {
+                    return can.name.toLowerCase() === c.name.toLowerCase();
+                });
             return (
                 <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate}/>
             )

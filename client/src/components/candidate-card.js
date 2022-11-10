@@ -21,6 +21,9 @@ const CandidateCard = (props) => {
     }, []);
 
     let foundUser;
+    if(props.user){
+      foundUser = users.find(el => el.email === props.user.email);
+    }
     useEffect(() => {
       fetch('/api/saved')
         .then((response) => response.json())
@@ -28,11 +31,6 @@ const CandidateCard = (props) => {
           setSaved(saved);
       });
             //searching for user currently logged in
-
-    if(props.user){
-      foundUser = users.find(el => el.email === props.user.email);
-    }
-    console.log(foundUser);
         //check if user has saved candidate already
         if(props.user && foundUser){
           let currentUser = saved.filter((entry) => {
@@ -52,20 +50,24 @@ const CandidateCard = (props) => {
           }
     }, [saved.length, foundUser]);   
 
+
     const handleSaved = async (id) => {
-        if(props.user){
+      console.log(foundUser);
+        if(props.user && foundUser){
+          console.log(id)
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
-          return await fetch(`/api/saved/${foundUser.id}`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(savedInfo),
-            })
-              .then((response) => {
-                return response.json();
-              })
-              .then((data) => {
-                console.log("From the post ", data);
-              });
+          console.log(savedInfo);
+          // return await fetch(`/api/saved/${foundUser.id}`, {
+          //     method: "POST",
+          //     headers: { "Content-Type": "application/json" },
+          //     body: JSON.stringify(savedInfo),
+          //   })
+          //     .then((response) => {
+          //       return response.json();
+          //     })
+          //     .then((data) => {
+          //       console.log("From the post ", data);
+          //     });
         }
     }
 
