@@ -8,6 +8,10 @@ const CandidateCard = (props) => {
     const [isSaved, setIsSaved] = useState(false); 
     const [saved, setSaved] = useState([]);
     const [thisUser, setThisUser] = useState(null);
+
+    //saving props
+    let candidate = props.candidate;
+    let contest = props.contest;
     useEffect(() => {
       fetch('/api/users')
         .then((response) => response.json())
@@ -31,18 +35,16 @@ const CandidateCard = (props) => {
           let currentUser = saved.map((entry) => {
             if(entry.user_id === foundUser.id) return entry;
            });
-           console.log(currentUser);
-          let alreadySaved = currentUser.find((entry) => {
-             if(props.candidateId){
-               return entry.candidate_id === props.candidateId.id;
+          let alreadySaved = currentUser.map((entry) => {
+            console.log(entry);
+            if(props.candidateId){
+              if(entry.candidate_id === props.candidateId.id){
+                setIsSaved(true);
+                return true;
               }
+            }
           });
-          console.log(alreadySaved); 
-    }, []);   
-
-    //saving props
-    let candidate = props.candidate;
-    let contest = props.contest;
+    }, [saved.length, foundUser]);   
 
     const handleSaved = async (id) => {
         if(props.user){
