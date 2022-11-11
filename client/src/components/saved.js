@@ -52,7 +52,10 @@ const Saved = (props) => {
             }
 
         });
-        return alreadySaved[0].id;
+        if(alreadySaved){
+            return alreadySaved[0].id;
+        }
+        
     }
 
     return (

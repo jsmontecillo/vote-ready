@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
 
-
-.App {
+#App {
   text-align: center;
   font-family: 'Xanh Mono', monospace;
-  background-color: rgb(187, 187, 185);
+  background: #dad9de;
 }
 
 .App-logo {
@@ -59,27 +58,28 @@ span {
 }
 
 .menu {
-  color: green;
+  color: #7263a5;
   font-size: 16px;
 }
 
 
 .contact {
   background-color: rgb(186, 192, 150);
-  padding: 100px;
+  padding: 0px;
+  background-size: cover;
 }
 
 .open-links {
-  background-color: rgb(186, 192, 150);
+  background-color: #7263a5;
   height: 65px;
   padding: 20px;
 }
 
 .title {
   font-family: 'Xanh Mono', monospace;
-  color: green;
+  color: #dad9de;
   font-size: 40px;
-  text-shadow: 1px 1px rgb(186, 192, 150);
+  text-shadow: 1px 1px #716b87;
 }
 
 .login {
@@ -88,11 +88,11 @@ span {
 }
 
 hr {
-  color: green;
+  color: #5d4f91;
 }
 
 .welcome {
-  color: green;
+  color: #7263a5;
   margin-top: -100px;
 }
 
@@ -101,8 +101,8 @@ hr {
   color: #5a8dee!important;
 }
 .btn-primary {
-    border-color: rgb(155, 162, 116) !important;
-    background-color: rgb(186, 192, 150) !important;
+    border-color: #7a6eaa !important;
+    background-color: #dad9de !important;
     color: #fff;
 }
 .shadow-md {
