@@ -10,7 +10,7 @@ const Locations = (props) => {
     const [data, setData] = useState(locations);
 
     useEffect(() => {
-        fetch('/election')
+        fetch('/election-data.json')
         .then((response) => response.json())
         .then((data) => {
                 console.log(data.pollingLocations);

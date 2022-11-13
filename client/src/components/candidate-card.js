@@ -58,21 +58,20 @@ const CandidateCard = (props) => {
           console.log(id)
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
           console.log(savedInfo);
-          return await fetch(`/api/saved/${foundUser.id}`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(savedInfo),
-            })
-              .then((response) => {
-                return response.json();
-              })
-              .then((data) => {
-                console.log("From the post ", data);
-              });
+          // return await fetch(`/api/saved/${foundUser.id}`, {
+          //     method: "POST",
+          //     headers: { "Content-Type": "application/json" },
+          //     body: JSON.stringify(savedInfo),
+          //   })
+          //     .then((response) => {
+          //       return response.json();
+          //     })
+          //     .then((data) => {
+          //       console.log("From the post ", data);
+          //     });
         }
     }
 
-    //TODO: GET ENTRYID FROM DATABASE
     const handleRemove = async (entryId) => {
       setIsSaved(!isSaved);
       let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
