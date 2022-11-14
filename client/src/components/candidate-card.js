@@ -80,15 +80,15 @@ const CandidateCard = (props) => {
     }
     return (
       <>
-        <Card/>
+        <Card candidate={candidate} contest={props.contest}/>
+        <div className="candidate-card">
+            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+            <h4>{candidate.name}</h4>
+            <h4>{candidate.party ? candidate.party : null}</h4>
+            <p>{candidate.phone || null}</p>
+            <p>{candidate.candidateUrl || candidate.url}</p>
+        </div>
       </>
-        // <div className="candidate-card">
-        //     {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
-        //     <h4>{candidate.name}</h4>
-        //     <h4>{candidate.party ? candidate.party : null}</h4>
-        //     <p>{candidate.phone || null}</p>
-        //     <p>{candidate.candidateUrl || candidate.url}</p>
-        // </div>
     )
 }
 

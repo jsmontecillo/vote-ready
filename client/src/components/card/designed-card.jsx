@@ -34,7 +34,7 @@ const SpacedHorizontalContainer = styled.div`
 
 const BuyButton = styled.button`
   padding: 10px 16px;
-  background-color: #fbbe01;
+  background-color: #5d4f91;
   color: #000;
   text-transform: uppercase;
   font-size: 16px;
@@ -64,17 +64,17 @@ const NikeLogo = styled.div`
 `;
 
 export function CardDetails(props) {
+  console.log(props);
   return (
     <DetailsContainer>
-      <SmallText>NIKE</SmallText>
+      <SmallText>{props.candidate.party || null}</SmallText>
       <SpacedHorizontalContainer>
-        <MediumText>AIR JORDAN 1 MID SE GC</MediumText>
-        <MediumText>¥856</MediumText>
+        <MediumText>{props.candidate.name}</MediumText>
       </SpacedHorizontalContainer>
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>
-        <MediumText>YOUR NEXT SHOES</MediumText>
-        <BuyButton>BUY</BuyButton>
+        <MediumText></MediumText>
+        <BuyButton>SAVE</BuyButton>
       </SpacedHorizontalContainer>
       <NikeLogo>
         <img />

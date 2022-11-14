@@ -43,7 +43,7 @@ const Circle = styled.div`
   top: -4.2em;
   right: -10em;
   z-index: 5;
-  background-color: #fbbe01;
+  background-color: #5d4f91;
   border-radius: 50%;
 `;
 
@@ -69,7 +69,7 @@ const NikeText = styled.h1`
   text-transform: uppercase;
   margin: 0;
   z-index: 10;
-  font-size: 76px;
+  font-size: 30px;
   font-weight: 900;
 `;
 
@@ -117,7 +117,7 @@ function Card(props) {
           </CircleWrapper>
           <ShoesWrapper>
             <Shoes
-              style={{ x, y, rotateX, rotateY, rotate: "-25deg", z: 100000 }}
+              style={{ x, y, rotateX, rotateY, z: 100000, marginLeft: "50px", marginBottom: "-40px" }}
               drag
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
@@ -125,10 +125,10 @@ function Card(props) {
               <img src={Gavin} />
             </Shoes>
           </ShoesWrapper>
-          <NikeText>NIKE AIR</NikeText>
+          <NikeText>{props.contest}</NikeText>
         </TopContainer>
         <BottomContainer>
-          <CardDetails />
+          <CardDetails candidate={props.candidate}/>
         </BottomContainer>
       </CardContainer>
     </CardWrapper>
