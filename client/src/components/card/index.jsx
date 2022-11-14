@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Gavin from '../images/gavin.webp';
+import Padilla from '../images/padilla.png';
 import { CardDetails } from "./designed-card";
 
 const CardWrapper = styled.div`
@@ -102,7 +103,6 @@ function Card(props) {
   const rotateX = useTransform(y, [-100, 100], [30, -30]);
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
 
-  console.log(props.candidate.image);
 
   return (
     <CardWrapper>
@@ -124,7 +124,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || null} />
+              <img src={props.candidate.image || Padilla} />
             </Shoes>
           </ShoesWrapper>
           <NikeText>{props.contest}</NikeText>
