@@ -1,5 +1,6 @@
 import './candidate-card.css';
 import {useState, useEffect} from 'react';
+import Card from './card';
 
 
 const CandidateCard = (props) => {
@@ -78,13 +79,16 @@ const CandidateCard = (props) => {
       await response.json();
     }
     return (
-        <div className="candidate-card">
-            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
-            <h4>{candidate.name}</h4>
-            <h4>{candidate.party ? candidate.party : null}</h4>
-            <p>{candidate.phone || null}</p>
-            <p>{candidate.candidateUrl || candidate.url}</p>
-        </div>
+      <>
+        <Card/>
+      </>
+        // <div className="candidate-card">
+        //     {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+        //     <h4>{candidate.name}</h4>
+        //     <h4>{candidate.party ? candidate.party : null}</h4>
+        //     <p>{candidate.phone || null}</p>
+        //     <p>{candidate.candidateUrl || candidate.url}</p>
+        // </div>
     )
 }
 
