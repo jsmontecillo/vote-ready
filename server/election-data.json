@@ -48711,11 +48711,13 @@
             "candidates": [
                 {
                     "name": "ALEX PADILLA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "../images/padilla.png"
                 },
                 {
                     "name": "MARK P. MEUSER",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "../images/meuser.png"
                 }
             ]
         },
@@ -48738,11 +48740,13 @@
             "candidates": [
                 {
                     "name": "ALEX PADILLA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "../images/padilla.png"
                 },
                 {
                     "name": "MARK P. MEUSER",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "../images/meuser.png"
                 }
             ]
         },
@@ -48764,10 +48768,12 @@
             ],
             "candidates": [
                 {
-                    "name": "KAREN RUTH BASS"
+                    "name": "KAREN RUTH BASS",
+                    "image": "../images/bass.png"
                 },
                 {
-                    "name": "RICK J. CARUSO"
+                    "name": "RICK J. CARUSO",
+                    "image": "../images/caruso.png"
                 }
             ]
         },
@@ -48789,10 +48795,12 @@
             ],
             "candidates": [
                 {
-                    "name": "HYDEE FELDSTEIN SOTO"
+                    "name": "HYDEE FELDSTEIN SOTO",
+                    "image": "../images/soto.png"
                 },
                 {
-                    "name": "FAISAL M. GILL"
+                    "name": "FAISAL M. GILL",
+                    "image": "../images/gill.png"
                 }
             ]
         },
