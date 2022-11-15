@@ -21,7 +21,7 @@ const CardContainer = styled(motion.div)`
   flex-direction: column;
   border-radius: 25px;
   box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.2);
-  background-color: #1d1f21;
+  background-color: beige;
   color: #fff;
   position: relative;
   cursor: grab;
@@ -66,7 +66,7 @@ const BottomContainer = styled.div`
 `;
 
 const NikeText = styled.h1`
-  color: #fff;
+  color: darkgrey;
   text-transform: uppercase;
   margin: 0;
   z-index: 10;
@@ -115,7 +115,7 @@ function Card(props) {
       >
         <TopContainer>
           <CircleWrapper>
-            <Circle />
+            <Circle style={props.candidate.party === "Party Preference: Democratic" ? {backgroundColor: "#83A1CD"} : props.candidate.party === "Party Preference: Republican" ? {backgroundColor: "#CB4C4E"} : {backgroundColor: "grey"}}/>
           </CircleWrapper>
           <ShoesWrapper>
             <Shoes
@@ -124,7 +124,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} />
+              <img src={props.candidate.image || Padilla} style={{borderRadius: "50%", border: "solid 1px black"}}/>
             </Shoes>
           </ShoesWrapper>
           <NikeText>{props.contest}</NikeText>

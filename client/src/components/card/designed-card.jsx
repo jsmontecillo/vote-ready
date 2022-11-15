@@ -12,15 +12,15 @@ const DetailsContainer = styled.div`
 `;
 
 const MediumText = styled.span`
-  font-size: 18px;
-  color: #fff;
+  font-size: 20px;
+  color: darkgrey;
   font-weight: 800;
   text-transform: uppercase;
 `;
 
 const SmallText = styled.span`
   font-size: 11px;
-  color: #fff;
+  color: darkgrey;
   font-weight: 700;
   text-transform: uppercase;
 `;
