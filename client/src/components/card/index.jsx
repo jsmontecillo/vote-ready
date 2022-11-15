@@ -1,10 +1,9 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-
-import Gavin from '../images/gavin.webp';
 import Padilla from '../images/padilla.png';
 import { CardDetails } from "./designed-card";
+import './card.css';
 
 const CardWrapper = styled.div`
   width: 100%;
@@ -87,7 +86,7 @@ const ShoesWrapper = styled.div`
 const Shoes = styled(motion.div)`
   width: auto;
   height: 190px;
-  z-index: 99;
+  z-index: 6;
   user-select: none;
   margin-right: 3em;
   margin-top: 4em;
@@ -125,7 +124,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} style={{borderRadius: "50%", border: "solid 1px white"}}/>
+              <img src={props.candidate.image || Padilla} style={{height: "400px"}}/>
             </Shoes>
           </ShoesWrapper>
           <NikeText>{props.contest}</NikeText>

@@ -172,3 +172,18 @@ hr {
     cursor: pointer;
     text-decoration: none;
 }
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

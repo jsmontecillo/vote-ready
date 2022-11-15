@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
+import './card.css';
 
 const DetailsContainer = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   padding: 1em 6px 0 6px;
   line-height: 1;
+  z-index: 10;
 `;
 
 const MediumText = styled.span`

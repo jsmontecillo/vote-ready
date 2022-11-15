@@ -13,16 +13,30 @@ import Footer from './footer';
 import Saved from './components/saved.js';
 import Card from './components/card';
 import styled from "styled-components";
+import Fade from 'react-reveal/Fade';
 
 function App() {
   const [isClicked, setClicked] = useState(false);
+  const [visibility, setVisibility] = useState(false);
   const { isLoading } = useAuth0();
   const { user } = useAuth0();
   console.log(user);
   if (isLoading) {
     return <Loading />;
   }
+
   return (
+    <>
+        <div className={visibility ? 'invisible' : 'visible'}>
+          <Fade top cascade>
+            <div style={{alignItems: "center"}}>
+              <h1>VOTE READY:</h1>
+              <h1>LA CHOOSES</h1>
+              <p>Keep track of your chosen candidates here.</p>
+              <button type="button" onClick={() => {setVisibility(!visibility)}}>Start Voting</button>
+            </div>
+          </Fade>
+        </div>
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
@@ -62,6 +76,7 @@ function App() {
       </Routes>
       <Footer />
     </div>
+    </>
   );
 }
 
