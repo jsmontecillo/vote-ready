@@ -66,9 +66,10 @@ const BottomContainer = styled.div`
 `;
 
 const NikeText = styled.h1`
-  color: darkgrey;
+  color: #9A9A79;
   text-transform: uppercase;
-  margin: 0;
+  text-shadow: 1px 1px #716b87;
+  margin-bottom: 150px;
   z-index: 10;
   font-size: 30px;
   font-weight: 900;
@@ -124,7 +125,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} style={{borderRadius: "50%", border: "solid 1px black"}}/>
+              <img src={props.candidate.image || Padilla} style={{borderRadius: "50%", border: "solid 1px white"}}/>
             </Shoes>
           </ShoesWrapper>
           <NikeText>{props.contest}</NikeText>

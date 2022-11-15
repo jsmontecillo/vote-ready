@@ -35,7 +35,7 @@ const Locations = (props) => {
     return (
         <div>
             <Header title="Polling Locations" image={la2}/>
-            <h3>Find Events</h3>
+            <h3>Find Locations</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>
                     <label htmlFor="category-search">City</label>

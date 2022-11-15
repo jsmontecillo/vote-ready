@@ -7,20 +7,20 @@ const DetailsContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2.5em 6px 0 6px;
-  line-height: 1.4;
+  padding: 1em 6px 0 6px;
+  line-height: 1;
 `;
 
 const MediumText = styled.span`
   font-size: 20px;
-  color: darkgrey;
+  color: #9A9A79;
   font-weight: 800;
   text-transform: uppercase;
 `;
 
 const SmallText = styled.span`
   font-size: 11px;
-  color: darkgrey;
+  color: #9A9A79;
   font-weight: 700;
   text-transform: uppercase;
 `;
@@ -34,7 +34,7 @@ const SpacedHorizontalContainer = styled.div`
 
 const BuyButton = styled.button`
   padding: 10px 16px;
-  background-color: #5d4f91;
+  background-color: #9A9A79;
   color: #000;
   text-transform: uppercase;
   font-size: 16px;
@@ -46,8 +46,8 @@ const BuyButton = styled.button`
   border-radius: 8px;
   &:hover {
     background-color: transparent;
-    color: #fff;
-    border: 3px solid #fbbe01;
+    color: #9A9A79;
+    border: 3px solid #9A9A79;
   }
 `;
 

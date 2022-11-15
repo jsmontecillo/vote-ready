@@ -32,9 +32,9 @@ input {
 }
 
 .description {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-left: 30px;
-    width: 65%;
+    width: 100%;
     text-align: left;
     padding: 40px;
 }
