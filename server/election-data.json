@@ -48769,11 +48769,15 @@
             "candidates": [
                 {
                     "name": "KAREN RUTH BASS",
-                    "image": "https://i.ibb.co/19k1jxj/bass.png"
+                    "image": "https://i.ibb.co/19k1jxj/bass.png",
+                    "party": "Party Preference: Democratic",
+                    "url": "https://bass.house.gov/"
                 },
                 {
                     "name": "RICK J. CARUSO",
-                    "image": "https://i.ibb.co/GC0szZ6/caruso.png"
+                    "image": "https://i.ibb.co/GC0szZ6/caruso.png",
+                    "party": "Party Preference: Democratic",
+                    "url": "https://www.carusocan.com/"
                 }
             ]
         },
@@ -48796,11 +48800,15 @@
             "candidates": [
                 {
                     "name": "HYDEE FELDSTEIN SOTO",
-                    "image": "https://i.ibb.co/JHvbbTx/soto.png"
+                    "image": "https://i.ibb.co/JHvbbTx/soto.png",
+                    "party": "Nonpartisan",
+                    "url": "https://hydeeforcityattorney.com/"
                 },
                 {
                     "name": "FAISAL M. GILL",
-                    "image": "https://i.ibb.co/9yBZKy4/gill.png"
+                    "image": "https://i.ibb.co/9yBZKy4/gill.png",
+                    "url": "https://www.gillforla.com/",
+                    "party":"Party Preference: Democratic"
                 }
             ]
         },
@@ -48823,11 +48831,15 @@
             "candidates": [
                 {
                     "name": "KENNETH MEJIA",
-                    "image": "https://i.ibb.co/tJ8Sdbh/mejia.png"
+                    "image": "https://i.ibb.co/tJ8Sdbh/mejia.png",
+                    "url": "https://mejiaforcontroller.com/",
+                    "party":"Party Preference: Democratic"
                 },
                 {
                     "name": "PAUL KORETZ",
-                    "image": "https://i.ibb.co/pL5H95C/koretz.png"
+                    "image": "https://i.ibb.co/pL5H95C/koretz.png",
+                    "url": "https://www.koretzforla.com/",
+                    "party":"Party Preference: Democratic"
                 }
             ]
         },
@@ -48850,14 +48862,19 @@
             "candidates": [
                 {
                     "name": "JASON R. AULA",
-                    "image": "https://i.ibb.co/Rjryt2W/aula.png"
+                    "image": "https://i.ibb.co/Rjryt2W/aula.png",
+                    "url": "http://www.jasonaula.com/",
+                    "party": "Nonpartisan"
                 },
                 {
-                    "name": "GLENN TRUJILLO BAILEY"
+                    "name": "GLENN TRUJILLO BAILEY",
+                    "party": "Nonpartisan"
                 },
                 {
                     "name": "STEVEN VERES",
-                    "image": "https://i.ibb.co/PQZk8Jk/veres.png"
+                    "image": "https://i.ibb.co/PQZk8Jk/veres.png",
+                    "url": "https://www.steveveres.com/",
+                    "party": "Nonpartisan"
                 }
             ]
         },
@@ -48880,11 +48897,13 @@
             "candidates": [
                 {
                     "name": "ERNEST H. MORENO",
-                    "image": "https://i.ibb.co/GWPjC3q/moreno.png"
+                    "image": "https://i.ibb.co/GWPjC3q/moreno.png",
+                    "url": "https://www.laccd.edu/Board/Pages/Ernest-Moreno.aspx"
                 },
                 {
                     "name": "SARA HERNANDEZ",
-                    "image": "https://i.ibb.co/1nNkdxp/hernandez.png"
+                    "image": "https://i.ibb.co/1nNkdxp/hernandez.png",
+                    "url": "https://www.sarahernandez.com/"
                 },
                 {
                     "name": "CHRISTINE T. LAMONICA",
