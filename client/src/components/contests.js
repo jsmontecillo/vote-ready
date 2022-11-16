@@ -22,7 +22,7 @@ const Contests = (props) => {
     return (
         <div className="container">
             <div className="contests">
-            <div style={{marginTop: "15%"}}>
+            <div style={{marginTop: "20%"}}>
                 <h1 className="horizontal">MEET THE CANDIDATES</h1>
             </div>
                 {contests.map((c) => {

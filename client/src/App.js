@@ -13,7 +13,8 @@ import Footer from './footer';
 import Saved from './components/saved.js';
 import Card from './components/card';
 import styled from "styled-components";
-import Fade from 'react-reveal/Fade';
+import LA from './front.jpg';
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 function App() {
   const [isClicked, setClicked] = useState(false);
@@ -26,7 +27,7 @@ function App() {
   }
 
   return (
-    <>
+    <ScrollContainer>
         {/* <div className={visibility ? 'invisible' : 'visible'}>
           <Fade top cascade>
             <div style={{alignItems: "center"}}>
@@ -39,16 +40,19 @@ function App() {
         </div> */}
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
-        <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>
+        <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (null) : (<div>&#9776; MENU</div>)}</div>
         <div className="title">LA CHOOSES</div>
         {!user ? <span className="welcome">Welcome!</span> : <span className="welcome">Hello, {user.given_name}.</span>}
         <div className="login"><NavBar /></div>
-        <hr style={{marginTop: "-9px"}}/>
-        <hr style={{marginTop: "-10px"}}/>
-        <div className="welcome">
-          {!user ? <span>Welcome!</span> : <span>Hello, {user.given_name}.</span>}
-        </div>
       </nav>
+      <ScrollPage page={0}>
+        <Animator animation={batch(Fade(), MoveOut(0, 0))}>
+          <div className="contain">
+            <img src={LA} style={{width: "100%", objectFit: "cover"}}/>
+            <h1 className="center">Vote Ready</h1>
+          </div>
+        </Animator>
+      </ScrollPage>
       <>
         <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
           <div className="sd-header">
@@ -74,9 +78,14 @@ function App() {
           <Route path="feedback" element={<Feedback user={user}/>} />
           <Route path="/saved" element={<Saved user={user}/>} />
       </Routes>
+      <ScrollPage page={1}>
+        <Animator animation={batch(StickyIn(), FadeIn(), ZoomIn())}>
+          <h1>Hello</h1>
+        </Animator>
+      </ScrollPage>
       <Footer />
     </div>
-    </>
+    </ScrollContainer>
   );
 }
 

@@ -10,7 +10,7 @@ function Layout(props) {
   return (
     <div className="layout">
         {/* <UncontrolledExample /> */}
-      <Header title="VOTE READY" image={la}/>
+      {/* <Header title="VOTE READY" image={la}/> */}
       <Outlet />
       <div>
         <Contests user={props.user}/>

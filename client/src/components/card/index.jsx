@@ -124,7 +124,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} style={{height: "400px"}}/>
+              <img src={props.candidate.image || Padilla} style={{height: "400px", borderRadius: "10px"}}/>
             </Shoes>
           </ShoesWrapper>
           <NikeText>{props.contest}</NikeText>
