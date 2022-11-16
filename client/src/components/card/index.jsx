@@ -72,6 +72,7 @@ const NikeText = styled.h1`
   z-index: 10;
   font-size: 30px;
   font-weight: 900;
+  text-align: left;
 `;
 
 const ShoesWrapper = styled.div`
@@ -89,7 +90,7 @@ const Shoes = styled(motion.div)`
   z-index: 6;
   user-select: none;
   margin-right: 3em;
-  margin-top: 4em;
+  margin-top: 4.3em;
   img {
     width: auto;
     height: 100%;
@@ -124,10 +125,10 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} style={{height: "400px", borderRadius: "10px"}}/>
+              <img src={props.candidate.image || Padilla} style={{height: "400px", width: "283px", borderRadius: "10px", objectFit: "cover"}}/>
             </Shoes>
           </ShoesWrapper>
-          <NikeText>{props.contest}</NikeText>
+          <NikeText><div style={props.contest.length > 36 ? {fontSize: "20px"} : {}}>{props.contest}</div></NikeText>
         </TopContainer>
         <BottomContainer>
           <CardDetails candidate={props.candidate}/>

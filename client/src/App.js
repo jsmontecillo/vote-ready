@@ -49,7 +49,8 @@ function App() {
         <Animator animation={batch(Fade(), MoveOut(0, 0))}>
           <div className="contain">
             <img src={LA} style={{width: "100%", objectFit: "cover"}}/>
-            <h1 className="center">Vote Ready</h1>
+            <p className="center" style={{marginTop: "-30px"}}>Keep track of your votes.</p>
+            <h1 className="center">Vote Ready: LA</h1>
           </div>
         </Animator>
       </ScrollPage>
