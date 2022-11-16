@@ -76,7 +76,7 @@ export function CardDetails(props) {
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>
         <MediumText></MediumText>
-        <BuyButton>SAVE</BuyButton>
+        {/* <BuyButton>SAVE</BuyButton> */}
       </SpacedHorizontalContainer>
       <NikeLogo>
         <img />

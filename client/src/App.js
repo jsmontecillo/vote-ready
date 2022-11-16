@@ -11,9 +11,8 @@ import Mission from './mission';
 import Feedback from './components/feedback';
 import Footer from './footer';
 import Saved from './components/saved.js';
-import Card from './components/card';
-import styled from "styled-components";
 import LA from './front.jpg';
+import Fade2 from 'react-reveal/Fade';
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 
 function App() {
@@ -49,8 +48,10 @@ function App() {
         <Animator animation={batch(Fade(), MoveOut(0, 0))}>
           <div className="contain">
             <img src={LA} style={{width: "100%", objectFit: "cover"}}/>
-            <p className="center" style={{marginTop: "-30px"}}>Keep track of your votes.</p>
-            <h1 className="center">Vote Ready: LA</h1>
+            <Fade2 top>
+                <p className="center" style={{marginTop: "-30px"}}>Keep track of your votes.</p>
+                <h1 className="center">Vote Ready: LA</h1>
+            </Fade2>
           </div>
         </Animator>
       </ScrollPage>
@@ -79,11 +80,6 @@ function App() {
           <Route path="feedback" element={<Feedback user={user}/>} />
           <Route path="/saved" element={<Saved user={user}/>} />
       </Routes>
-      <ScrollPage page={1}>
-        <Animator animation={batch(StickyIn(), FadeIn(), ZoomIn())}>
-          <h1>Hello</h1>
-        </Animator>
-      </ScrollPage>
       <Footer />
     </div>
     </ScrollContainer>

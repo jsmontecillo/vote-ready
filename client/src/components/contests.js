@@ -24,6 +24,8 @@ const Contests = (props) => {
             <div className="contests">
             <div style={{marginTop: "20%"}}>
                 <h1 className="horizontal">MEET THE CANDIDATES</h1>
+                <span className="circle"></span>
+                <span className="circle2"></span>
             </div>
                 {contests.map((c) => {
                     return (
