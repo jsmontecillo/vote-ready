@@ -58,15 +58,15 @@ function App() {
       <>
         <div className={`sidebar ${isClicked == true ? 'active' : ''}`}>
           <div className="sd-header">
-            <div className="btn btn-primary" onClick={() => setClicked(!isClicked)}><i className="fa fa-times">X</i></div>
+            <div className="btn btn-primary" onClick={() => {setClicked(!isClicked)}}><i className="fa fa-times">X</i></div>
           </div>
           <div className="sd-body">
             <ul>
-              <li><a className="sd-link"><Link to="/" className="link">HOME</Link></a></li>
-              <li><a className="sd-link"><Link to="/mission" className="link">MISSION</Link></a></li>
-              <li><a className="sd-link"><Link to="/locations" className="link">LOCATIONS</Link></a></li>
-              <li><a className="sd-link"><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
-              {user ? (<li><a className="sd-link"><Link to="/saved" className="link">YOUR SAVED</Link></a></li>) : (null)}
+              <li><a className="sd-link" onClick={() => {setClicked(!isClicked)}}><Link to="/" className="link">HOME</Link></a></li>
+              <li><a className="sd-link" onClick={() => {setClicked(!isClicked)}}><Link to="/mission" className="link">MISSION</Link></a></li>
+              <li><a className="sd-link" onClick={() => {setClicked(!isClicked)}}><Link to="/locations" className="link">LOCATIONS</Link></a></li>
+              <li><a className="sd-link" onClick={() => {setClicked(!isClicked)}}><Link to="/feedback" className="link">FEEDBACK</Link></a></li>
+              {user ? (<li><a className="sd-link" onClick={() => {setClicked(!isClicked)}}><Link to="/saved" className="link">YOUR SAVED</Link></a></li>) : (null)}
             </ul>
           </div>
         </div>

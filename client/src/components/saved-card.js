@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import Card from './card';
 
 const SavedCard = (props) => {
     const [deleted, setDeleted] = useState(false);
@@ -14,13 +15,7 @@ const SavedCard = (props) => {
     return (
         <>
             {deleted ? (null) : (
-                <div className="candidate-card">
-                    <button type="button" onClick={() => handleRemove()}>-</button>
-                    <h4>{candidate.name}</h4>
-                    <h4>{candidate.party ? candidate.party : null}</h4>
-                    <p>{candidate.phone || null}</p>
-                    <p>{candidate.candidateUrl || candidate.url}</p>
-                </div>)}
+                <Card candidate={candidate} contest="TODO"/>)}
         </>
     )
 }
