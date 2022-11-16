@@ -17,7 +17,7 @@ const Candidates = (props) => {
 
     return (
         <div>
-            <div style={{width: "1200px", display: "flex"}}>
+            <div style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
                 {contestCandidates.map((c) => {
                     let thisCandidate = candidates.find((can) => {
                         return can.name.toLowerCase() === c.name.toLowerCase();

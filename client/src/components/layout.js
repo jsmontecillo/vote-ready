@@ -8,14 +8,14 @@ import UncontrolledExample from './carousel';
 
 function Layout(props) {
   return (
-    <>
+    <div className="layout">
         {/* <UncontrolledExample /> */}
-      {/*<Header title="VOTE READY" image={la}/>*/}
+      <Header title="VOTE READY" image={la}/>
       <Outlet />
-      <div className="description">
+      <div>
         <Contests user={props.user}/>
       </div>
-    </>
+    </div>
   );
 }
 

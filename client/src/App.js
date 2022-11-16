@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-        <div className={visibility ? 'invisible' : 'visible'}>
+        {/* <div className={visibility ? 'invisible' : 'visible'}>
           <Fade top cascade>
             <div style={{alignItems: "center"}}>
               <h1>VOTE READY:</h1>
@@ -36,7 +36,7 @@ function App() {
               <button type="button" onClick={() => {setVisibility(!visibility)}}>Start Voting</button>
             </div>
           </Fade>
-        </div>
+        </div> */}
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (<div>X CLOSE</div>) : (<div>&#9776; MENU</div>)}</div>

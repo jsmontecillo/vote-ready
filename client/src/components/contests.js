@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import ContestCard from './contest-card';
+import Fade from 'react-reveal/Fade';
 
 const Contests = (props) => {
     const [contests, setContests] = useState([]);
@@ -19,13 +20,22 @@ const Contests = (props) => {
     }, []);
 
     return (
-        <>
-            {contests.map((c) => {
-                return (
-                    <ContestCard contest={c} user={props.user}/>
-                )
-            })}
-        </>
+        <div className="container">
+            <div className="contests">
+            <div style={{marginTop: "15%"}}>
+                <h1 className="horizontal">MEET THE CANDIDATES</h1>
+            </div>
+                {contests.map((c) => {
+                    return (
+                        <Fade right>
+                            <div>
+                            <ContestCard contest={c} user={props.user}/>
+                            </div>
+                        </Fade>
+                    )
+                })}
+            </div>
+        </div>
     )
 }
 
