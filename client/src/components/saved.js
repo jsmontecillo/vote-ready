@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import SavedCard from './saved-card';
+import Fade from 'react-reveal/Fade';
 
 const Saved = (props) => {
     const [contests, setContests] = useState([]);
@@ -65,11 +66,19 @@ const Saved = (props) => {
     return (
         <>
             <h1>Your Saved Candidates</h1>
+            <div className="saved-container">
             {saved.map((c) => {    
                 let currentEntry = findingEntry(c);
                 console.log(currentEntry);                       
-                return(<SavedCard candidate={c} savedEntry={currentEntry} />)
+                return(
+                    <Fade left>
+                        <div className="saved-child">
+                            <SavedCard candidate={c} savedEntry={currentEntry} />
+                        </div>
+                    </Fade>
+                )
             })}
+            </div>
         </>
     )
 }
