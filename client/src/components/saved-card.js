@@ -15,7 +15,10 @@ const SavedCard = (props) => {
     return (
         <>
             {deleted ? (null) : (
-                <Card candidate={candidate} contest="TODO"/>)}
+                <>
+                <Card candidate={candidate} contest="TODO"/>
+                <button type="button" onClick={() => handleRemove()} style={{position: "absolute", marginTop: "-80px", zIndex: "11", marginLeft: "50px"}}>-</button>
+                </>)}
         </>
     )
 }

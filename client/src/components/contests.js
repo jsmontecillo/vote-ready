@@ -6,11 +6,6 @@ const Contests = (props) => {
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
-        // fetch("/election")
-        //   .then((response) => response.json())
-        //   .then((users) => {
-        //     setContests(users.contests);
-        // });
         fetch('/election-data.json')
           .then((response) => response.json())
           .then((election) => {
