@@ -49071,94 +49071,6 @@
             ]
         },
         {
-            "type": "Referendum",
-            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LH",
-            "district": {
-                "name": "CITY OF LOS ANGELES",
-                "scope": "citywide"
-            },
-            "ballotPlacement": "318",
-            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LH",
-            "referendumText": "AUTHORIZATION FOR ADDITIONAL LOW-INCOME HOUSING. PROPOSITION LH. Shall a measure authorizing public entities in the City of Los Angeles to develop, construct, or acquire up to 5,000 additional units of low-income rental housing in each Council District to address homelessness and affordable housing needs, subject to availability of funding and City development requirements, be adopted?",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SP",
-            "district": {
-                "name": "CITY OF LOS ANGELES",
-                "scope": "citywide"
-            },
-            "ballotPlacement": "319",
-            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SP",
-            "referendumText": "PARKS AND RECREATIONAL FACILITIES PARCEL TAX. PROPOSITION SP. Shall an ordinance providing funding for parks, recreational centers, pools, playgrounds, waterways, beaches, green spaces, open spaces, childcare and other facilities, and increasing park equity in the City of Los Angeles, through a tax of $0.08414 per square foot on improved parcels, reduced to $0.0222 upon completion of certain programs or in 30 years, with citizen oversight and exemptions for low-income households, generating approximately $227 million annually, be adopted?",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE ULA",
-            "district": {
-                "name": "CITY OF LOS ANGELES",
-                "scope": "citywide"
-            },
-            "ballotPlacement": "320",
-            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE ULA",
-            "referendumText": "FUNDING FOR AFFORDABLE HOUSING AND TENANT ASSISTANCE PROGRAMS THROUGH A TAX ON REAL PROPERTY TRANSFERS OVER $5 MILLION. INITIATIVE ORDINANCE ULA. Shall an ordinance funding and authorizing affordable housing programs and resources for tenants at risk of homelessness through a 4% tax on sales/transfers of real property exceeding $5 million, and 5.5% on properties of $10 million or more, with exceptions; until ended by voters; generating approximately $600 million - $1.1 billion annually; be adopted?",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE LA",
-            "district": {
-                "name": "LOS ANGELES COMMUNITY COLLEGE",
-                "scope": "schoolBoard"
-            },
-            "ballotPlacement": "366",
-            "referendumTitle": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE LA",
-            "referendumText": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SAFETY, REPAIR, JOB TRAINING MEASURE. To repair/upgrade local community colleges, classrooms, water pipes, sewer/gas lines, technology, science labs for nurses, paramedics, firefighters, veterans; prepare students for jobs/university transfer; remove asbestos, lead paint; acquire, construct, repair facilities, sites, equipment; shall Los Angeles Community College District's measure authorizing $5,300,000,000 in bonds at legal rates, levying $25 per $100,000 of assessed valuation, generating $345,000,000 annually while bonds are outstanding, be adopted, requiring oversight, all funds used locally?",
-            "referendumPassageThreshold": "55% OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
             "type": "General",
             "ballotTitle": "SUPERVISOR 3RD DISTRICT",
             "district": {
@@ -49389,50 +49301,6 @@
                     "name": "PATRICK HARE",
                     "image": "https://i.ibb.co/dKFLmp1/hare.png",
                     "url": "https://www.patrickhareforjudge.com/"
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "COUNTY MEASURE A",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "398",
-            "referendumTitle": "COUNTY MEASURE A",
-            "referendumText": "CHARTER AMENDMENT - PROVIDING AUTHORITY TO REMOVE AN ELECTED SHERIFF FOR CAUSE. Shall the measure amending the County of Los Angeles Charter to grant the Board of Supervisors authority to remove an elected Sheriff from office for cause, including a violation of law related to a Sheriff's duties, flagrant or repeated neglect of duties, misappropriation of funds, willful falsification of documents, or obstructing an investigation, by a four-fifths vote of the Board of Supervisors, after written notice and an opportunity to be heard, be adopted?",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "COUNTY MEASURE C",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "399",
-            "referendumTitle": "COUNTY MEASURE C",
-            "referendumText": "Los Angeles County Cannabis Business Tax Measure. Shall the measure enacting a tax in the unincorporated areas of Los Angeles County on cannabis businesses at annual rates not to exceed $10 per square foot for cultivation (adjusted for inflation) and a percentage of gross receipts for various cannabis businesses, including retail (6 percent), testing laboratory (2 percent), distribution (3 percent), manufacturing and for all other cannabis businesses (4 percent), generating approximately $10,360,000 to $15,170,000 annually, until ended by voters, be adopted?",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
                 }
             ]
         },
@@ -49711,160 +49579,6 @@
                     "image": "https://i.ibb.co/3fHvm2Z/thurmond.png",
                     "party": "Party Preference: Democratic",
                     "url": "https://www.tonythurmond.com/"
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 1",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "409",
-            "referendumTitle": "STATE MEASURE 1",
-            "referendumText": "CONSTITUTIONAL RIGHT TO REPRODUCTIVE FREEDOM. LEGISLATIVE CONSTITUTIONAL AMENDMENT. Amends California Constitution to expressly include an individual's fundamental right to reproductive freedom, which includes the fundamental right to choose to have an abortion and the fundamental right to choose or refuse contraceptives. This amendment does not narrow or limit the existing rights to privacy and equal protection under the California Constitution. Fiscal Impact: No direct fiscal effect because reproductive rights already are protected by state law.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 26",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "410",
-            "referendumTitle": "STATE MEASURE 26",
-            "referendumText": "ALLOWS IN-PERSON ROULETTE, DICE GAMES, SPORTS WAGERING ON TRIBAL LANDS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE. Also allows: sports wagering at certain horseracing tracks; private lawsuits to enforce certain gambling laws. Directs revenues to General Fund, problem-gambling programs, enforcement. Fiscal Impact: Increased state revenues, possibly reaching tens of millions of dollars annually. Some of these revenues would support increased state regulatory and enforcement costs that could reach the low tens of millions of dollars annually.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 27",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "411",
-            "referendumTitle": "STATE MEASURE 27",
-            "referendumText": "ALLOWS ONLINE AND MOBILE SPORTS WAGERING OUTSIDE TRIBAL LANDS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE. Allows Indian tribes and affiliated businesses to operate online/mobile sports wagering outside tribal lands. Directs revenues to regulatory costs, homelessness programs, nonparticipating tribes. Fiscal Impact: Increased state revenues, possibly in the hundreds of millions of dollars but not likely to exceed $500 million annually. Some revenues would support state regulatory costs, possibly reaching the mid-tens of millions of dollars annually.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 28",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "412",
-            "referendumTitle": "STATE MEASURE 28",
-            "referendumText": "PROVIDES ADDITIONAL FUNDING FOR ARTS AND MUSIC EDUCATION IN PUBLIC SCHOOLS. INITIATIVE STATUTE. Provides additional funding from state General Fund for arts and music education in all K-12 public schools (including charter schools). Fiscal Impact: Increased state costs of about $1 billion annually, beginning next year, for arts education in public schools.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 29",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "413",
-            "referendumTitle": "STATE MEASURE 29",
-            "referendumText": "REQUIRES ON-SITE LICENSED MEDICAL PROFESSIONAL AT KIDNEY DIALYSIS CLINICS AND ESTABLISHES OTHER STATE REQUIREMENTS. INITIATIVE STATUTE. Requires physician, nurse practitioner, or physician assistant on site during treatment. Requires clinics to: disclose physicians' ownership interests; report infection data. Fiscal Impact: Increased state and local government costs likely in the tens of millions of dollars annually.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 30",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "414",
-            "referendumTitle": "STATE MEASURE 30",
-            "referendumText": "PROVIDES FUNDING FOR PROGRAMS TO REDUCE AIR POLLUTION AND PREVENT WILDFIRES BY INCREASING TAX ON PERSONAL INCOME OVER $2 MILLION. INITIATIVE STATUTE. Allocates tax revenues to zero-emission vehicle purchase incentives, vehicle charging stations, and wildfire prevention. Fiscal Impact: Increased state tax revenue ranging from $3.5 billion to $5 billion annually, with the new funding used to support zero-emission vehicle programs and wildfire response and prevention activities.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
-                }
-            ]
-        },
-        {
-            "type": "Referendum",
-            "ballotTitle": "STATE MEASURE 31",
-            "district": {
-                "name": "COUNTYWIDE",
-                "scope": "countywide"
-            },
-            "ballotPlacement": "415",
-            "referendumTitle": "STATE MEASURE 31",
-            "referendumText": "REFERENDUM ON 2020 LAW THAT WOULD PROHIBIT THE RETAIL SALE OF CERTAIN FLAVORED TOBACCO PRODUCTS. A \"Yes\" vote approves, and a \"No\" vote rejects, a 2020 law prohibiting retail sale of certain flavored tobacco products. Fiscal Impact: Decreased state tobacco tax revenues ranging from tens of millions of dollars annually to around $100 million annually.",
-            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
-            "referendumBallotResponses": [
-                "YES",
-                "NO"
-            ],
-            "sources": [
-                {
-                    "name": "Voting Information Project",
-                    "official": true
                 }
             ]
         },
@@ -50201,6 +49915,294 @@
                 {
                     "name": "ELIZABETH ANNETTE GRIMES",
                     "image": "https://i.ibb.co/L5dbgPK/grimes.png"
+                }
+            ]
+        }
+    ],
+    "referendums": [
+        {
+            "type": "Referendum",
+            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LH",
+            "district": {
+                "name": "CITY OF LOS ANGELES",
+                "scope": "citywide"
+            },
+            "ballotPlacement": "318",
+            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE LH",
+            "referendumText": "AUTHORIZATION FOR ADDITIONAL LOW-INCOME HOUSING. PROPOSITION LH. Shall a measure authorizing public entities in the City of Los Angeles to develop, construct, or acquire up to 5,000 additional units of low-income rental housing in each Council District to address homelessness and affordable housing needs, subject to availability of funding and City development requirements, be adopted?",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SP",
+            "district": {
+                "name": "CITY OF LOS ANGELES",
+                "scope": "citywide"
+            },
+            "ballotPlacement": "319",
+            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE SP",
+            "referendumText": "PARKS AND RECREATIONAL FACILITIES PARCEL TAX. PROPOSITION SP. Shall an ordinance providing funding for parks, recreational centers, pools, playgrounds, waterways, beaches, green spaces, open spaces, childcare and other facilities, and increasing park equity in the City of Los Angeles, through a tax of $0.08414 per square foot on improved parcels, reduced to $0.0222 upon completion of certain programs or in 30 years, with citizen oversight and exemptions for low-income households, generating approximately $227 million annually, be adopted?",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE ULA",
+            "district": {
+                "name": "CITY OF LOS ANGELES",
+                "scope": "citywide"
+            },
+            "ballotPlacement": "320",
+            "referendumTitle": "LOS ANGELES CITY GENERAL MUNICIPAL ELECTION - MEASURE ULA",
+            "referendumText": "FUNDING FOR AFFORDABLE HOUSING AND TENANT ASSISTANCE PROGRAMS THROUGH A TAX ON REAL PROPERTY TRANSFERS OVER $5 MILLION. INITIATIVE ORDINANCE ULA. Shall an ordinance funding and authorizing affordable housing programs and resources for tenants at risk of homelessness through a 4% tax on sales/transfers of real property exceeding $5 million, and 5.5% on properties of $10 million or more, with exceptions; until ended by voters; generating approximately $600 million - $1.1 billion annually; be adopted?",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE LA",
+            "district": {
+                "name": "LOS ANGELES COMMUNITY COLLEGE",
+                "scope": "schoolBoard"
+            },
+            "ballotPlacement": "366",
+            "referendumTitle": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SPECIAL ELECTION - MEASURE LA",
+            "referendumText": "LOS ANGELES COMMUNITY COLLEGE DISTRICT SAFETY, REPAIR, JOB TRAINING MEASURE. To repair/upgrade local community colleges, classrooms, water pipes, sewer/gas lines, technology, science labs for nurses, paramedics, firefighters, veterans; prepare students for jobs/university transfer; remove asbestos, lead paint; acquire, construct, repair facilities, sites, equipment; shall Los Angeles Community College District's measure authorizing $5,300,000,000 in bonds at legal rates, levying $25 per $100,000 of assessed valuation, generating $345,000,000 annually while bonds are outstanding, be adopted, requiring oversight, all funds used locally?",
+            "referendumPassageThreshold": "55% OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "COUNTY MEASURE A",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "398",
+            "referendumTitle": "COUNTY MEASURE A",
+            "referendumText": "CHARTER AMENDMENT - PROVIDING AUTHORITY TO REMOVE AN ELECTED SHERIFF FOR CAUSE. Shall the measure amending the County of Los Angeles Charter to grant the Board of Supervisors authority to remove an elected Sheriff from office for cause, including a violation of law related to a Sheriff's duties, flagrant or repeated neglect of duties, misappropriation of funds, willful falsification of documents, or obstructing an investigation, by a four-fifths vote of the Board of Supervisors, after written notice and an opportunity to be heard, be adopted?",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "COUNTY MEASURE C",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "399",
+            "referendumTitle": "COUNTY MEASURE C",
+            "referendumText": "Los Angeles County Cannabis Business Tax Measure. Shall the measure enacting a tax in the unincorporated areas of Los Angeles County on cannabis businesses at annual rates not to exceed $10 per square foot for cultivation (adjusted for inflation) and a percentage of gross receipts for various cannabis businesses, including retail (6 percent), testing laboratory (2 percent), distribution (3 percent), manufacturing and for all other cannabis businesses (4 percent), generating approximately $10,360,000 to $15,170,000 annually, until ended by voters, be adopted?",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 1",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "409",
+            "referendumTitle": "STATE MEASURE 1",
+            "referendumText": "CONSTITUTIONAL RIGHT TO REPRODUCTIVE FREEDOM. LEGISLATIVE CONSTITUTIONAL AMENDMENT. Amends California Constitution to expressly include an individual's fundamental right to reproductive freedom, which includes the fundamental right to choose to have an abortion and the fundamental right to choose or refuse contraceptives. This amendment does not narrow or limit the existing rights to privacy and equal protection under the California Constitution. Fiscal Impact: No direct fiscal effect because reproductive rights already are protected by state law.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 26",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "410",
+            "referendumTitle": "STATE MEASURE 26",
+            "referendumText": "ALLOWS IN-PERSON ROULETTE, DICE GAMES, SPORTS WAGERING ON TRIBAL LANDS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE. Also allows: sports wagering at certain horseracing tracks; private lawsuits to enforce certain gambling laws. Directs revenues to General Fund, problem-gambling programs, enforcement. Fiscal Impact: Increased state revenues, possibly reaching tens of millions of dollars annually. Some of these revenues would support increased state regulatory and enforcement costs that could reach the low tens of millions of dollars annually.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 27",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "411",
+            "referendumTitle": "STATE MEASURE 27",
+            "referendumText": "ALLOWS ONLINE AND MOBILE SPORTS WAGERING OUTSIDE TRIBAL LANDS. INITIATIVE CONSTITUTIONAL AMENDMENT AND STATUTE. Allows Indian tribes and affiliated businesses to operate online/mobile sports wagering outside tribal lands. Directs revenues to regulatory costs, homelessness programs, nonparticipating tribes. Fiscal Impact: Increased state revenues, possibly in the hundreds of millions of dollars but not likely to exceed $500 million annually. Some revenues would support state regulatory costs, possibly reaching the mid-tens of millions of dollars annually.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 28",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "412",
+            "referendumTitle": "STATE MEASURE 28",
+            "referendumText": "PROVIDES ADDITIONAL FUNDING FOR ARTS AND MUSIC EDUCATION IN PUBLIC SCHOOLS. INITIATIVE STATUTE. Provides additional funding from state General Fund for arts and music education in all K-12 public schools (including charter schools). Fiscal Impact: Increased state costs of about $1 billion annually, beginning next year, for arts education in public schools.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 29",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "413",
+            "referendumTitle": "STATE MEASURE 29",
+            "referendumText": "REQUIRES ON-SITE LICENSED MEDICAL PROFESSIONAL AT KIDNEY DIALYSIS CLINICS AND ESTABLISHES OTHER STATE REQUIREMENTS. INITIATIVE STATUTE. Requires physician, nurse practitioner, or physician assistant on site during treatment. Requires clinics to: disclose physicians' ownership interests; report infection data. Fiscal Impact: Increased state and local government costs likely in the tens of millions of dollars annually.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 30",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "414",
+            "referendumTitle": "STATE MEASURE 30",
+            "referendumText": "PROVIDES FUNDING FOR PROGRAMS TO REDUCE AIR POLLUTION AND PREVENT WILDFIRES BY INCREASING TAX ON PERSONAL INCOME OVER $2 MILLION. INITIATIVE STATUTE. Allocates tax revenues to zero-emission vehicle purchase incentives, vehicle charging stations, and wildfire prevention. Fiscal Impact: Increased state tax revenue ranging from $3.5 billion to $5 billion annually, with the new funding used to support zero-emission vehicle programs and wildfire response and prevention activities.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "Referendum",
+            "ballotTitle": "STATE MEASURE 31",
+            "district": {
+                "name": "COUNTYWIDE",
+                "scope": "countywide"
+            },
+            "ballotPlacement": "415",
+            "referendumTitle": "STATE MEASURE 31",
+            "referendumText": "REFERENDUM ON 2020 LAW THAT WOULD PROHIBIT THE RETAIL SALE OF CERTAIN FLAVORED TOBACCO PRODUCTS. A \"Yes\" vote approves, and a \"No\" vote rejects, a 2020 law prohibiting retail sale of certain flavored tobacco products. Fiscal Impact: Decreased state tobacco tax revenues ranging from tens of millions of dollars annually to around $100 million annually.",
+            "referendumPassageThreshold": "MAJORITY OF VOTES CAST",
+            "referendumBallotResponses": [
+                "YES",
+                "NO"
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
                 }
             ]
         }
