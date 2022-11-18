@@ -65,7 +65,7 @@ const Saved = (props) => {
 
     return (
         <>
-            <h1>Your Saved Candidates</h1>
+            <h1 style={{color: "white"}}>Your Saved Candidates</h1>
             <div className="saved-container">
             {saved.map((c) => {    
                 let currentEntry = findingEntry(c);

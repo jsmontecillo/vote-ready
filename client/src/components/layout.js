@@ -4,7 +4,8 @@ import Contests from "./contests.js";
 import { BrowserRouter, Route, Link, Outlet } from "react-router-dom";
 import './layout.css';
 import la from './la.jpg';
-import UncontrolledExample from './carousel';
+import Fade2 from 'react-reveal/Fade';
+import LA from '../front.jpg';
 
 function Layout(props) {
   return (
@@ -14,6 +15,15 @@ function Layout(props) {
       <Outlet />
       <div>
         <Contests user={props.user}/>
+        <div>
+          <Fade2 top cascade>
+            <div>
+              <h1>Referendums</h1>
+              <h1>Referendums</h1>
+              <h1>Referendums</h1>
+            </div>
+          </Fade2>
+        </div>
       </div>
     </div>
   );

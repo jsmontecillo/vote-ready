@@ -27,16 +27,6 @@ function App() {
 
   return (
     <ScrollContainer>
-        {/* <div className={visibility ? 'invisible' : 'visible'}>
-          <Fade top cascade>
-            <div style={{alignItems: "center"}}>
-              <h1>VOTE READY:</h1>
-              <h1>LA CHOOSES</h1>
-              <p>Keep track of your chosen candidates here.</p>
-              <button type="button" onClick={() => {setVisibility(!visibility)}}>Start Voting</button>
-            </div>
-          </Fade>
-        </div> */}
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
         <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (null) : (<div>&#9776; MENU</div>)}</div>
@@ -45,7 +35,7 @@ function App() {
         <div className="login"><NavBar /></div>
       </nav>
       <ScrollPage page={0}>
-        <Animator animation={batch(Fade(), MoveOut(0, 0))}>
+        <Animator animation={batch(Fade(), MoveOut(0, -400))}>
           <div className="contain">
             <img src={LA} style={{width: "100%", objectFit: "cover"}}/>
             <Fade2 top>
@@ -80,7 +70,8 @@ function App() {
           <Route path="feedback" element={<Feedback user={user}/>} />
           <Route path="/saved" element={<Saved user={user}/>} />
       </Routes>
-      <Footer />
+    <Footer />
+    
     </div>
     </ScrollContainer>
   );
