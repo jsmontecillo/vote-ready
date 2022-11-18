@@ -11,6 +11,8 @@ import Mission from './mission';
 import Feedback from './components/feedback';
 import Footer from './footer';
 import Saved from './components/saved.js';
+import Card from './components/card';
+import styled from "styled-components";
 
 function App() {
   const [isClicked, setClicked] = useState(false);

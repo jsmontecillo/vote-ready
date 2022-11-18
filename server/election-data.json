@@ -48711,17 +48711,19 @@
             "candidates": [
                 {
                     "name": "ALEX PADILLA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/3S8N0Lc/padilla.png"
                 },
                 {
                     "name": "MARK P. MEUSER",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/6WBbGX9/meuser.png"
                 }
             ]
         },
         {
             "type": "General",
-            "ballotTitle": "UNITED STATES SENATOR - Short Term (Unexpired term ending January 3, 2023)",
+            "ballotTitle": "UNITED STATES SENATOR - Short Term",
             "district": {
                 "name": "COUNTYWIDE",
                 "scope": "countywide"
@@ -48738,11 +48740,13 @@
             "candidates": [
                 {
                     "name": "ALEX PADILLA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/3S8N0Lc/padilla.png"
                 },
                 {
                     "name": "MARK P. MEUSER",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/6WBbGX9/meuser.png"
                 }
             ]
         },
@@ -48764,10 +48768,16 @@
             ],
             "candidates": [
                 {
-                    "name": "KAREN RUTH BASS"
+                    "name": "KAREN RUTH BASS",
+                    "image": "https://i.ibb.co/19k1jxj/bass.png",
+                    "party": "Party Preference: Democratic",
+                    "url": "https://bass.house.gov/"
                 },
                 {
-                    "name": "RICK J. CARUSO"
+                    "name": "RICK J. CARUSO",
+                    "image": "https://i.ibb.co/GC0szZ6/caruso.png",
+                    "party": "Party Preference: Democratic",
+                    "url": "https://www.carusocan.com/"
                 }
             ]
         },
@@ -48789,10 +48799,16 @@
             ],
             "candidates": [
                 {
-                    "name": "HYDEE FELDSTEIN SOTO"
+                    "name": "HYDEE FELDSTEIN SOTO",
+                    "image": "https://i.ibb.co/JHvbbTx/soto.png",
+                    "party": "Nonpartisan",
+                    "url": "https://hydeeforcityattorney.com/"
                 },
                 {
-                    "name": "FAISAL M. GILL"
+                    "name": "FAISAL M. GILL",
+                    "image": "https://i.ibb.co/9yBZKy4/gill.png",
+                    "url": "https://www.gillforla.com/",
+                    "party":"Party Preference: Democratic"
                 }
             ]
         },
@@ -48814,10 +48830,16 @@
             ],
             "candidates": [
                 {
-                    "name": "KENNETH MEJIA"
+                    "name": "KENNETH MEJIA",
+                    "image": "https://i.ibb.co/tJ8Sdbh/mejia.png",
+                    "url": "https://mejiaforcontroller.com/",
+                    "party":"Party Preference: Democratic"
                 },
                 {
-                    "name": "PAUL KORETZ"
+                    "name": "PAUL KORETZ",
+                    "image": "https://i.ibb.co/pL5H95C/koretz.png",
+                    "url": "https://www.koretzforla.com/",
+                    "party":"Party Preference: Democratic"
                 }
             ]
         },
@@ -48839,13 +48861,20 @@
             ],
             "candidates": [
                 {
-                    "name": "JASON R. AULA"
+                    "name": "JASON R. AULA",
+                    "image": "https://i.ibb.co/Rjryt2W/aula.png",
+                    "url": "http://www.jasonaula.com/",
+                    "party": "Nonpartisan"
                 },
                 {
-                    "name": "GLENN TRUJILLO BAILEY"
+                    "name": "GLENN TRUJILLO BAILEY",
+                    "party": "Nonpartisan"
                 },
                 {
-                    "name": "STEVEN VERES"
+                    "name": "STEVEN VERES",
+                    "image": "https://i.ibb.co/PQZk8Jk/veres.png",
+                    "url": "https://www.steveveres.com/",
+                    "party": "Nonpartisan"
                 }
             ]
         },
@@ -48867,13 +48896,18 @@
             ],
             "candidates": [
                 {
-                    "name": "ERNEST H. MORENO"
+                    "name": "ERNEST H. MORENO",
+                    "image": "https://i.ibb.co/GWPjC3q/moreno.png",
+                    "url": "https://www.laccd.edu/Board/Pages/Ernest-Moreno.aspx"
                 },
                 {
-                    "name": "SARA HERNANDEZ"
+                    "name": "SARA HERNANDEZ",
+                    "image": "https://i.ibb.co/1nNkdxp/hernandez.png",
+                    "url": "https://www.sarahernandez.com/"
                 },
                 {
-                    "name": "CHRISTINE T. LAMONICA"
+                    "name": "CHRISTINE T. LAMONICA",
+                    "image": "https://i.ibb.co/Tmtbh4v/lamonica.png"
                 }
             ]
         },
@@ -48895,10 +48929,14 @@
             ],
             "candidates": [
                 {
-                    "name": "GABRIEL BUELNA"
+                    "name": "GABRIEL BUELNA",
+                    "image": "https://i.ibb.co/j6rwpMF/buelna.png",
+                    "url": "https://www.laccd.edu/Board/Pages/Gabriel-Buelna.aspx"
                 },
                 {
-                    "name": "ROBERT L. PAYNE"
+                    "name": "ROBERT L. PAYNE",
+                    "image": "https://i.ibb.co/0XhByf8/payne.png",
+                    "url": "https://www.calstate.edu/impact-of-the-csu/alumni/Honorary-Degrees/Pages/L-Robert-Payne.aspx"
                 }
             ]
         },
@@ -48920,13 +48958,22 @@
             ],
             "candidates": [
                 {
-                    "name": "KELSEY IINO"
+                    "name": "KELSEY IINO",
+                    "image": "https://i.ibb.co/WBRwS0Q/iino.png",
+                    "url": "https://www.kelseyiino.com/",
+                    "party": "Nonpartisan"
                 },
                 {
-                    "name": "MARK DUTTON"
+                    "name": "MARK DUTTON",
+                    "image": "https://i.ibb.co/df3Hh0Q/dutton.png",
+                    "url": "https://www.facebook.com/people/Mark-Dutton-for-LACCD-2022/100085882930636/",
+                    "party": "Nonpartisan"
                 },
                 {
-                    "name": "NANCY PEARLMAN"
+                    "name": "NANCY PEARLMAN",
+                    "image": "https://i.ibb.co/s1GGDPh/pearlman.png",
+                    "url": "http://nancypearlman.net/",
+                    "party": "Nonpartisan"
                 }
             ]
         },
@@ -48949,11 +48996,15 @@
             "candidates": [
                 {
                     "name": "KRISTINA IRWIN",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/VTpDB7h/irwin.png",
+                    "url": "https://kristinairwin.com/"
                 },
                 {
                     "name": "BEN ALLEN",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/XWJLF3G/allen.png",
+                    "url": "https://sd26.senate.ca.gov/"
                 }
             ]
         },
@@ -48976,11 +49027,15 @@
             "candidates": [
                 {
                     "name": "LOUIS ABRAMSON",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/GQJK4Tx/abramson.png",
+                    "url": "https://louisforca.com/"
                 },
                 {
                     "name": "RICK CHAVEZ ZBUR",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/89grv8L/zbur.png",
+                    "url": "https://www.rickchavezzbur.com/"
                 }
             ]
         },
@@ -49003,11 +49058,15 @@
             "candidates": [
                 {
                     "name": "G \"MAEBE A. GIRL\" PUDLO",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/2K4Hfd9/pudlo.png",
+                    "url": "https://maebeagirlforcongress.org/"
                 },
                 {
                     "name": "ADAM B. SCHIFF",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/NFCjP68/schiff.png",
+                    "url": "https://schiff.house.gov/"
                 }
             ]
         },
@@ -49117,10 +49176,15 @@
             ],
             "candidates": [
                 {
-                    "name": "LINDSEY HORVATH"
+                    "name": "LINDSEY HORVATH",
+                    "image": "https://i.ibb.co/nQVgGrb/horvath.png",
+                    "url": "https://www.lindseyhorvath.com/"
                 },
                 {
-                    "name": "BOB HERTZBERG"
+                    "name": "BOB HERTZBERG",
+                    "image": "https://i.ibb.co/4TQDfCy/hertzberg.png",
+                    "url": "https://www.hertzbergforsupervisor.com/",
+                    "party":"Party Preference: Democratic"
                 }
             ]
         },
@@ -49142,10 +49206,15 @@
             ],
             "candidates": [
                 {
-                    "name": "ALEX VILLANUEVA"
+                    "name": "ALEX VILLANUEVA",
+                    "image": "https://i.ibb.co/kQhqryd/villanueva.png",
+                    "url": "https://alexvillanueva.org/",
+                    "party": "Party Preference: Democratic"
                 },
                 {
-                    "name": "ROBERT LUNA"
+                    "name": "ROBERT LUNA",
+                    "image": "https://i.ibb.co/PT9Brqr/luna.png",
+                    "url": "https://www.lunaforsheriff.com/"
                 }
             ]
         },
@@ -49167,10 +49236,14 @@
             ],
             "candidates": [
                 {
-                    "name": "ABBY BARON"
+                    "name": "ABBY BARON",
+                    "image": "https://i.ibb.co/BwDPNmq/baron.png",
+                    "url": "https://baronforjudge.com/"
                 },
                 {
-                    "name": "ANNA SLOTKY REITANO"
+                    "name": "ANNA SLOTKY REITANO",
+                    "image": "https://i.ibb.co/bgd0dWD/reitano.png",
+                    "url": "https://www.reitanoforjudge.com/"
                 }
             ]
         },
@@ -49192,10 +49265,14 @@
             ],
             "candidates": [
                 {
-                    "name": "FERNANDA MARIA BARRETO"
+                    "name": "FERNANDA MARIA BARRETO",
+                    "image": "https://i.ibb.co/khx7RwJ/barreto.png",
+                    "url": "https://www.fernandabarreto4judge.com/"
                 },
                 {
-                    "name": "ELIZABETH LASHLEY-HAYNES"
+                    "name": "ELIZABETH LASHLEY-HAYNES",
+                    "image": "https://i.ibb.co/JK7CHp5/haynes.png",
+                    "url": "https://www.lashley-haynesforjudge2022.com/"
                 }
             ]
         },
@@ -49217,10 +49294,14 @@
             ],
             "candidates": [
                 {
-                    "name": "RENEE YOLANDE CHANG"
+                    "name": "RENEE YOLANDE CHANG",
+                    "image": "https://i.ibb.co/n3DNVtq/chang.png",
+                    "url": "https://www.reneechangforjudge.com/"
                 },
                 {
-                    "name": "HOLLY L. HANCOCK"
+                    "name": "HOLLY L. HANCOCK",
+                    "image": "https://i.ibb.co/NnNzzw6/hancock.png",
+                    "url": "https://hancock4judge.com/"
                 }
             ]
         },
@@ -49242,10 +49323,14 @@
             ],
             "candidates": [
                 {
-                    "name": "MELISSA LYONS"
+                    "name": "MELISSA LYONS",
+                    "image": "https://i.ibb.co/b1ff8gN/lyons.png",
+                    "url": "https://melissalyons4judge.com/"
                 },
                 {
-                    "name": "LESLIE GUTIERREZ"
+                    "name": "LESLIE GUTIERREZ",
+                    "image": "https://i.ibb.co/r3CB7BC/gutierrez.png",
+                    "url": "https://www.facebook.com/LeslieGutierrezforJudge2022/"
                 }
             ]
         },
@@ -49267,10 +49352,14 @@
             ],
             "candidates": [
                 {
-                    "name": "CAROLYN \"JIYOUNG\" PARK"
+                    "name": "CAROLYN \"JIYOUNG\" PARK",
+                    "image": "https://i.ibb.co/Vmqd97p/park.png",
+                    "url": "https://www.parkforjudge2022.com/"
                 },
                 {
-                    "name": "MELISSA HAMMOND"
+                    "name": "MELISSA HAMMOND",
+                    "image": "https://i.ibb.co/9y7n8wH/hammond.png",
+                    "url": "https://www.melissahammondforjudge.com/"
                 }
             ]
         },
@@ -49292,10 +49381,14 @@
             ],
             "candidates": [
                 {
-                    "name": "KAREN A. BRAKO"
+                    "name": "KAREN A. BRAKO",
+                    "image": "https://i.ibb.co/8mJbqVg/brako.png",
+                    "url": "https://brakoforjudge.com/"
                 },
                 {
-                    "name": "PATRICK HARE"
+                    "name": "PATRICK HARE",
+                    "image": "https://i.ibb.co/dKFLmp1/hare.png",
+                    "url": "https://www.patrickhareforjudge.com/"
                 }
             ]
         },
@@ -49362,11 +49455,15 @@
             "candidates": [
                 {
                     "name": "BRIAN DAHLE",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/xfmxjMR/dahle.png",
+                    "url": "https://briandahle.com/"
                 },
                 {
                     "name": "GAVIN NEWSOM",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://post.ca.gov/portals/0/post_images/homepageleaders/GavinNewsom350x515.png?ver=2019-08-28-124939-207",
+                    "url": "https://gavinnewsom.com/"
                 }
             ]
         },
@@ -49389,11 +49486,15 @@
             "candidates": [
                 {
                     "name": "ANGELA E. UNDERWOOD JACOBS",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/M52TLj8/jacobs.png",
+                    "url": "https://www.angelaforcalifornia.com/"
                 },
                 {
                     "name": "ELENI KOUNALAKIS",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/9gy1s7x/koulanakis.png",
+                    "url": "https://www.eleniforca.com/"
                 }
             ]
         },
@@ -49416,11 +49517,15 @@
             "candidates": [
                 {
                     "name": "ROB BERNOSKY",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/fpYzcBg/bernosky.png",
+                    "url": "http://www.votebernosky.com/"
                 },
                 {
                     "name": "SHIRLEY N. WEBER",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/X4Qxb0W/weber.png",
+                    "url": "https://drshirleyweber.com/"
                 }
             ]
         },
@@ -49443,11 +49548,15 @@
             "candidates": [
                 {
                     "name": "MALIA M. COHEN",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/DwyC3xK/cohen.png",
+                    "url": "https://maliacohen.us/"
                 },
                 {
                     "name": "LANHEE J. CHEN",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/WtVPzdS/chen.png",
+                    "url": "https://chenforcalifornia.com/"
                 }
             ]
         },
@@ -49470,11 +49579,15 @@
             "candidates": [
                 {
                     "name": "FIONA MA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/wYX1HPr/ma.png",
+                    "url": "https://www.fionama.com/"
                 },
                 {
                     "name": "JACK M. GUERRERO",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/m6Kfk0V/guerrero.png",
+                    "url": "https://www.jack4treasurer.com/"
                 }
             ]
         },
@@ -49497,11 +49610,15 @@
             "candidates": [
                 {
                     "name": "ROB BONTA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/bXHwycs/bona2.png",
+                    "url": "https://robbonta.com/"
                 },
                 {
                     "name": "NATHAN HOCHMAN",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/ccNYyk7/hochman.png",
+                    "url": "https://www.nathanhochman.com/"
                 }
             ]
         },
@@ -49524,11 +49641,15 @@
             "candidates": [
                 {
                     "name": "ROBERT HOWELL",
-                    "party": "Party Preference: Republican"
+                    "party": "Party Preference: Republican",
+                    "image": "https://i.ibb.co/Kb9vvTh/howell.png",
+                    "url": "https://electroberthowell.com/"
                 },
                 {
                     "name": "RICARDO LARA",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/bdq8tNG/lara.png",
+                    "url": "https://ricardolara.com/"
                 }
             ]
         },
@@ -49551,11 +49672,15 @@
             "candidates": [
                 {
                     "name": "TONY VAZQUEZ",
-                    "party": "Party Preference: Democratic"
+                    "party": "Party Preference: Democratic",
+                    "image": "https://i.ibb.co/SX7ppN7/vasquez.png",
+                    "url": "https://www.tonyvazquez.org/"
                 },
                 {
                     "name": "Y. MARIE MANVEL",
-                    "party": "Party Preference: None"
+                    "party": "Party Preference: None",
+                    "image": "https://i.ibb.co/VjC2JzZ/manvel.png",
+                    "url": "https://www.facebook.com/people/Y-Marie-Manvel-for-State-Board-of-Equalization/100081116595090/"
                 }
             ]
         },
@@ -49577,10 +49702,15 @@
             ],
             "candidates": [
                 {
-                    "name": "LANCE RAY CHRISTENSEN"
+                    "name": "LANCE RAY CHRISTENSEN",
+                    "image": "https://i.ibb.co/sFvrfGZ/christensen.png",
+                    "url": "https://lancechristensen.com/"
                 },
                 {
-                    "name": "TONY K. THURMOND"
+                    "name": "TONY K. THURMOND",
+                    "image": "https://i.ibb.co/3fHvm2Z/thurmond.png",
+                    "party": "Party Preference: Democratic",
+                    "url": "https://www.tonythurmond.com/"
                 }
             ]
         },
@@ -49754,7 +49884,8 @@
             ],
             "candidates": [
                 {
-                    "name": "PATRICIA GUERRERO"
+                    "name": "PATRICIA GUERRERO",
+                    "image": "https://i.ibb.co/zfhvpxN/guerrero2.png"
                 }
             ]
         },
@@ -49774,7 +49905,8 @@
             ],
             "candidates": [
                 {
-                    "name": "GOODWIN LIU"
+                    "name": "GOODWIN LIU",
+                    "image": "https://i.ibb.co/8X8L9ZC/liu.png"
                 }
             ]
         },
@@ -49794,7 +49926,8 @@
             ],
             "candidates": [
                 {
-                    "name": "MARTIN J. JENKINS"
+                    "name": "MARTIN J. JENKINS",
+                    "image": "https://i.ibb.co/YyrF4T3/jenkins.png"
                 }
             ]
         },
@@ -49814,7 +49947,8 @@
             ],
             "candidates": [
                 {
-                    "name": "JOSHUA P. GROBAN"
+                    "name": "JOSHUA P. GROBAN",
+                    "image": "https://i.ibb.co/t2DRWHJ/groban.png"
                 }
             ]
         },
@@ -49834,7 +49968,8 @@
             ],
             "candidates": [
                 {
-                    "name": "FRANCES ROTHSCHILD"
+                    "name": "FRANCES ROTHSCHILD",
+                    "image": "https://i.ibb.co/Hz2WRVh/rothschild.png"
                 }
             ]
         },
@@ -49854,7 +49989,8 @@
             ],
             "candidates": [
                 {
-                    "name": "LAURENCE D. RUBIN"
+                    "name": "LAURENCE D. RUBIN",
+                    "image": "https://i.ibb.co/jDd0Cc5/rubin.png"
                 }
             ]
         },
@@ -49874,7 +50010,8 @@
             ],
             "candidates": [
                 {
-                    "name": "MARIA E. STRATTON"
+                    "name": "MARIA E. STRATTON",
+                    "image": "https://i.ibb.co/Qnnt6Rs/stratton.png"
                 }
             ]
         },
@@ -49894,7 +50031,8 @@
             ],
             "candidates": [
                 {
-                    "name": "JUDITH M. ASHMANN"
+                    "name": "JUDITH M. ASHMANN",
+                    "image": "https://i.ibb.co/N1K4Sdn/ashmann.png"
                 }
             ]
         },
@@ -49914,7 +50052,8 @@
             ],
             "candidates": [
                 {
-                    "name": "LUIS A. LAVIN"
+                    "name": "LUIS A. LAVIN",
+                    "image": "https://i.ibb.co/Bq2LVq6/lavin.png"
                 }
             ]
         },
@@ -49934,7 +50073,8 @@
             ],
             "candidates": [
                 {
-                    "name": "AUDREY B. COLLINS"
+                    "name": "AUDREY B. COLLINS",
+                    "image": "https://i.ibb.co/jTHVm37/collins.png"
                 }
             ]
         },
@@ -49954,7 +50094,8 @@
             ],
             "candidates": [
                 {
-                    "name": "BRIAN S. CURREY"
+                    "name": "BRIAN S. CURREY",
+                    "image": "https://i.ibb.co/Zgy1W3t/currey.png"
                 }
             ]
         },
@@ -49974,7 +50115,8 @@
             ],
             "candidates": [
                 {
-                    "name": "LAMAR W. BAKER"
+                    "name": "LAMAR W. BAKER",
+                    "image": "https://i.ibb.co/frP3m8c/baker.png"
                 }
             ]
         },
@@ -49994,7 +50136,8 @@
             ],
             "candidates": [
                 {
-                    "name": "HERNALDO J. BALTODANO"
+                    "name": "HERNALDO J. BALTODANO",
+                    "image": "https://i.ibb.co/CtLnBWf/baltodano.png"
                 }
             ]
         },
@@ -50014,7 +50157,8 @@
             ],
             "candidates": [
                 {
-                    "name": "JOHN L. SEGAL"
+                    "name": "JOHN L. SEGAL",
+                    "image": "https://i.ibb.co/nCnP4Sc/segal.png"
                 }
             ]
         },
@@ -50034,7 +50178,8 @@
             ],
             "candidates": [
                 {
-                    "name": "JOHN SHEPARD WILEY JR."
+                    "name": "JOHN SHEPARD WILEY JR.",
+                    "image": "https://i.ibb.co/djyZ8MM/wiley.png"
                 }
             ]
         },
@@ -50054,7 +50199,8 @@
             ],
             "candidates": [
                 {
-                    "name": "ELIZABETH ANNETTE GRIMES"
+                    "name": "ELIZABETH ANNETTE GRIMES",
+                    "image": "https://i.ibb.co/L5dbgPK/grimes.png"
                 }
             ]
         }

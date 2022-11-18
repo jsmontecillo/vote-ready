@@ -41,7 +41,11 @@ const Saved = (props) => {
 
     const findingEntry = (c) => {
         let currentUser = savedEntries.map((entry) => {
-            if(entry.user_id === found.id) return entry;
+            if(found.id){
+                if(entry.user_id === found.id){
+                    return entry
+                };
+            }
         });
 
         let alreadySaved = currentUser.filter((entry) => {
@@ -52,7 +56,10 @@ const Saved = (props) => {
             }
 
         });
-        return alreadySaved[0].id;
+        if(alreadySaved[0].id){
+            return alreadySaved[0].id;
+        }
+        
     }
 
     return (

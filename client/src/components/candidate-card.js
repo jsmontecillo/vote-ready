@@ -1,5 +1,6 @@
 import './candidate-card.css';
 import {useState, useEffect} from 'react';
+import Card from './card';
 
 
 const CandidateCard = (props) => {
@@ -53,6 +54,7 @@ const CandidateCard = (props) => {
 
     const handleSaved = async (id) => {
       console.log(foundUser);
+      setIsSaved(!isSaved);
         if(props.user && foundUser){
           console.log(id)
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
@@ -71,19 +73,24 @@ const CandidateCard = (props) => {
         }
     }
 
-    //TODO: GET ENTRYID FROM DATABASE
     const handleRemove = async (entryId) => {
+      setIsSaved(!isSaved);
       let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
       await response.json();
     }
     return (
-        <div className="candidate-card">
-            {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
-            <h4>{candidate.name}</h4>
-            <h4>{candidate.party ? candidate.party : null}</h4>
-            <p>{candidate.phone || null}</p>
-            <p>{candidate.candidateUrl || candidate.url}</p>
+      <>
+        <div style={{margin: "10px"}}>
+          <Card candidate={candidate} contest={props.contest}/>
+          {/* <div className="candidate-card">
+              {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
+              <h4>{candidate.name}</h4>
+              <h4>{candidate.party ? candidate.party : null}</h4>
+              <p>{candidate.phone || null}</p>
+              <p>{candidate.candidateUrl || candidate.url}</p>
+          </div> */}
         </div>
+      </>
     )
 }
 
