@@ -18,7 +18,7 @@ const Contests = (props) => {
         <div className="container">
             <div className="contests">
                 <div style={{marginTop: "20%"}}>
-                    <p className="horizontal">MEET THE CANDIDATES</p>
+                    <h3 className="horizontal">MEET THE CANDIDATES</h3>
                     <span className="circle"></span>
                     <span className="circle2"></span>
                 </div>
