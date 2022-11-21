@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
 
+body {
+  overflow-x: hidden;
+}
+
 #App {
   text-align: center;
   font-family: 'Xanh Mono', monospace;

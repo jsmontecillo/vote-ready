@@ -3,3 +3,23 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+.border {
+    background-color: #FFFFF0;
+    width: 200px;
+    height: 20px;
+    transform: rotate(-1deg);
+    margin-left: 20px;
+    margin-top: 5px;
+    position: absolute;
+    z-index: -5;
+}
+
+.border2 {
+    background-color: #FFFFF0;
+    width: 180px;
+    height: 20px;
+    transform: rotate(2deg);
+    position: absolute;
+    z-index: -5;
+}

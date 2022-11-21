@@ -69,9 +69,11 @@ export function CardDetails(props) {
   console.log(props);
   return (
     <DetailsContainer>
+      {props.candidate.party ? <div className="border"></div> : (null)}
       <SmallText>{props.candidate.party || null}</SmallText>
       <SpacedHorizontalContainer>
-        <MediumText>{props.candidate.name}</MediumText>
+        <div className="border2"></div>
+        {props.candidate.name.length > 16 ? (<SmallText>{props.candidate.name}</SmallText>) : (<MediumText>{props.candidate.name}</MediumText>)}
       </SpacedHorizontalContainer>
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>

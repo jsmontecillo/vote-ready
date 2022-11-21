@@ -37,7 +37,7 @@ input {
 
 .contests {
     overflow-x: scroll;
-    overflow-y:hidden; 
+    overflow-y: hidden; 
     display: flex;
     height: 550px;
     margin-left: -90px;
