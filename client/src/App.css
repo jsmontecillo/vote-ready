@@ -204,3 +204,63 @@ hr {
   left: 15%;
   transform: translate(-50%, -50%);
 }
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .circle2 {
+    display: none;
+  }
+
+  .contests {
+    margin-top: -800px;
+  }
+
+  .saved-container {
+    margin-top: -800px;
+  }
+
+  .saved-child {
+    width: 50%;
+    margin: 50px;
+    vertical-align: middle;
+  }
+
+  .feedback {
+    display: none;
+  }
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .circle2 {
+    display: none;
+  }
+  
+  .contests {
+    margin-top: -350px;
+  }
+
+  .horizontal {
+    font-size: 5px;
+  }
+}

@@ -67,7 +67,7 @@ const Saved = (props) => {
         <>
             <h1 style={{color: "white"}}>Your Saved Candidates</h1>
             <div className="saved-container">
-            {saved.map((c) => {    
+                {saved.map((c) => {    
                 let currentEntry = findingEntry(c);
                 console.log(currentEntry);                       
                 return(
@@ -77,7 +77,7 @@ const Saved = (props) => {
                         </div>
                     </Fade>
                 )
-            })}
+                })}
             </div>
         </>
     )
