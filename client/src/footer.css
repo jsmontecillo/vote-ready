@@ -1,3 +1,15 @@
 .background {
-    background-image: url('footer.webp');
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+
 }
+
+.feedback {
+    background: rgba(215, 202, 202, 0.5);
+    padding: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+

@@ -1,7 +1,10 @@
 .nav-bar {
     background-color: white;
     text-align: left;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 100%;
+    z-index: 1;
 }
 
 .link {
@@ -31,11 +34,84 @@ input {
     margin: 2px;
 }
 
-.description {
-    margin-top: 0px;
-    margin-left: 30px;
-    width: 100%;
-    text-align: left;
-    padding: 40px;
+
+.contests {
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    display: flex;
+    height: 550px;
+    margin-left: -90px;
+    margin-right: -70px;
 }
 
+.layout {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.horizontal {
+    position: relative;
+    padding: 10px;
+    color: #edecf1;
+    text-shadow: 1px 1px #716b87;
+    font-size: 100px;
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 40px;
+    z-index: 10;
+}
+
+.circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    bottom: -45.2em;
+    left: -10em;
+    z-index: 0;
+    background-color: #362a64;
+    border-radius: 50%;
+}
+
+.circle2 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 45em;
+    right: -10em;
+    z-index: 0;
+    background-color: #b2a7d7;
+    border-radius: 50%;
+}
+
+.save {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: #9A9A79;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 290ms ease-in-out;
+    border-radius: 8px;
+}
+
+.save:hover {
+        background-color: transparent;
+        color: #9A9A79;
+        border: 3px solid #9A9A79;
+}
+
+.saved-container {
+    width: 100%;
+}
+
+.saved-child {
+    margin: 10px;
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+}

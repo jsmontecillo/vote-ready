@@ -34,7 +34,7 @@ const Locations = (props) => {
 
     return (
         <div>
-            <Header title="Polling Locations" image={la2}/>
+            {/* <Header title="Polling Locations" image={la2}/> */}
             <h3>Find Locations</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>
@@ -43,11 +43,16 @@ const Locations = (props) => {
                 </fieldset>
             </form>
 
-            <div>
-                <h3>Results</h3>
-                {searched ? (data.map((item) => (
-                    <LocationCard location={item} />
-                ))): (null)}
+            <div className="location-contain">
+                <div className="location-child">
+                    <h3>Results</h3>
+                    {searched ? (data.map((item) => (
+                        <LocationCard location={item} />
+                    ))): (null)}
+                </div>
+                <div className="location-child">
+                    {/*map goes here*/}
+                </div>
             </div>
         </div>
 

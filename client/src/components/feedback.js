@@ -26,11 +26,8 @@ const Feedback = () => {
         setFeedback((feedback) => ({ ...feedback, feedback }));
     };
     return (
-        <>
-            <Header title="Sources and Feedback" />
-            <div className="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit dui vel venenatis dapibus. Etiam eu erat suscipit, accumsan libero sit amet, mollis tortor. Sed quis sodales est. Vestibulum sodales erat a purus venenatis, sit amet hendrerit dolor congue. Integer vestibulum, erat eu hendrerit mollis, elit metus ultrices orci, sed aliquet neque arcu id magna. Sed volutpat libero sit amet aliquet vulputate. Nunc consequat leo viverra facilisis blandit.
-            </div>
+        <div className="feedback">
+            {/* <Header title="Sources and Feedback" /> */}
             <h1>Feedback</h1>
             <p>We are always looking to improve the accuracy and neutrality of the site. Please share any constructive criticism with us.</p>
             <form>
@@ -61,7 +58,7 @@ const Feedback = () => {
                 </fieldset>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </div>
     )
 }
 

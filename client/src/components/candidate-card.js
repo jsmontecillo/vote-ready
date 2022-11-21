@@ -59,17 +59,17 @@ const CandidateCard = (props) => {
           console.log(id)
           let savedInfo = {user_id: foundUser.id, candidate_id: id};
           console.log(savedInfo);
-          // return await fetch(`/api/saved/${foundUser.id}`, {
-          //     method: "POST",
-          //     headers: { "Content-Type": "application/json" },
-          //     body: JSON.stringify(savedInfo),
-          //   })
-          //     .then((response) => {
-          //       return response.json();
-          //     })
-          //     .then((data) => {
-          //       console.log("From the post ", data);
-          //     });
+          return await fetch(`/api/saved/${foundUser.id}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(savedInfo),
+            })
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                console.log("From the post ", data);
+              });
         }
     }
 
@@ -82,9 +82,9 @@ const CandidateCard = (props) => {
       <>
         <div style={{margin: "10px"}}>
           <Card candidate={candidate} contest={props.contest}/>
+          {props.user ? (<button type="button" style={{position: "absolute", marginTop: "-80px", zIndex: "11", marginLeft: "50px"}} className="save" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <p>-</p> : <p>+</p>}</button>) : (null)}
           {/* <div className="candidate-card">
-              {props.user ? (<button type="button" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <h3>-</h3> : <h3>+</h3>}</button>) : (null)}
-              <h4>{candidate.name}</h4>
+              /* <h4>{candidate.name}</h4>
               <h4>{candidate.party ? candidate.party : null}</h4>
               <p>{candidate.phone || null}</p>
               <p>{candidate.candidateUrl || candidate.url}</p>

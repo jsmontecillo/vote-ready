@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
+import './card.css';
 
 const DetailsContainer = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   padding: 1em 6px 0 6px;
   line-height: 1;
+  z-index: 10;
 `;
 
 const MediumText = styled.span`
@@ -67,14 +69,16 @@ export function CardDetails(props) {
   console.log(props);
   return (
     <DetailsContainer>
+      {props.candidate.party ? <div className="border"></div> : (null)}
       <SmallText>{props.candidate.party || null}</SmallText>
       <SpacedHorizontalContainer>
-        <MediumText>{props.candidate.name}</MediumText>
+        <div className="border2"></div>
+        {props.candidate.name.length > 16 ? (<SmallText>{props.candidate.name}</SmallText>) : (<MediumText>{props.candidate.name}</MediumText>)}
       </SpacedHorizontalContainer>
       <Marginer direction="vertical" margin="1.2em" />
       <SpacedHorizontalContainer>
         <MediumText></MediumText>
-        <BuyButton>SAVE</BuyButton>
+        {/* <BuyButton>SAVE</BuyButton> */}
       </SpacedHorizontalContainer>
       <NikeLogo>
         <img />
