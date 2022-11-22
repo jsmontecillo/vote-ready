@@ -19,7 +19,7 @@ const Contests = (props) => {
         <div className="container">
             <div className="contests">
                 <div style={{marginTop: "20%"}}>
-                    <h3 className="horizontal">{t('meet').toUpperCase()}</h3>
+                    <h5 className="horizontal">{t('meet').toUpperCase()}</h5>
                     <span className="circle"></span>
                     <span className="circle2"></span>
                 </div>

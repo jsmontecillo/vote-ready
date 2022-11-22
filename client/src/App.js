@@ -69,27 +69,26 @@ function App() {
     <ScrollContainer>
     <div id="App" className="d-flex flex-column h-100">
       <nav className="nav-bar">
-        <div className="menu" onClick={() => setClicked(!isClicked)}>{isClicked ? (null) : (<div>&#9776; {t('menu').toUpperCase()}</div>)}
-        </div>
+        <div className="menu" style={isClicked ? {visibility: "hidden"} : (null)} onClick={() => setClicked(!isClicked)}><div>&#9776; {t('menu').toUpperCase()}</div></div>
         <div className="title">{t('app_title')}</div>
         {!user ? <span className="welcome">{t('welcome')}!</span> : <span className="welcome">{t('hello')}, {user.given_name}.</span>}
         <div className="login"><NavBar t={t}/></div>
 
         <div className="dropdown">
-    <button onClick={handleOpen}><GlobeIcon /><a style={{height:"10px"}}>{'\u25BC'}</a></button>
-      {open ? (
-        <ul className="menu">
-          {languages.map(({code, name, country_code}) => {
-            return (
-              <li className="dropdown-item">
-                <span className={`flag-con flag-icon-${country_code}`}></span>
-              <button onClick={() => i18next.changeLanguage(code)}>{name}</button>
-            </li>
-            )
-          })}
-        </ul>
-      ) : null}
-    </div>
+          <button onClick={handleOpen}><GlobeIcon /><a style={{height:"10px"}}>{'\u25BC'}</a></button>
+          {open ? (
+            <ul className="menu">
+              {languages.map(({code, name, country_code}) => {
+                return (
+                  <li className="dropdown-item">
+                    <span className={`flag-con flag-icon-${country_code}`}></span>
+                  <button onClick={() => {i18next.changeLanguage(code); handleOpen()}}>{name}</button>
+                </li>
+                )
+              })}
+            </ul>
+          ) : null}
+        </div>
       </nav>
       
       <ScrollPage page={0}>
