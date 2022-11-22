@@ -16,7 +16,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
-    supportedLngs: ['en', 'sp', 'fr'],
+    supportedLngs: ['en', 'es', 'fr'],
     fallbackLng: 'en',
     debug: false,
     // Options for language detector
