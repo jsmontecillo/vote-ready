@@ -27,7 +27,7 @@ const Contests = (props) => {
                     return (
                         <Fade right>
                             <div>
-                                <ContestCard contest={c} user={props.user}/>
+                                <ContestCard contest={c} user={props.user} t={t}/>
                             </div>
                         </Fade>
                     )

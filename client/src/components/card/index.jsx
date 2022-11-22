@@ -99,6 +99,7 @@ const Shoes = styled(motion.div)`
 `;
 
 function Card(props) {
+  let t = props.t;
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [30, -30]);
@@ -128,10 +129,10 @@ function Card(props) {
               <img src={props.candidate.image || Padilla} style={{height: "400px", width: "283px", borderRadius: "10px", objectFit: "cover"}}/>
             </Shoes>
           </ShoesWrapper>
-          <NikeText><div style={props.contest.length > 36 ? {fontSize: "20px"} : {}}>{props.contest}</div></NikeText>
+          <NikeText><div style={props.contest.length > 36 ? {fontSize: "20px"} : {}}>{t(props.contest)}</div></NikeText>
         </TopContainer>
         <BottomContainer>
-          <CardDetails candidate={props.candidate}/>
+          <CardDetails candidate={props.candidate} t={props.t}/>
         </BottomContainer>
       </CardContainer>
     </CardWrapper>

@@ -66,11 +66,12 @@ const NikeLogo = styled.div`
 `;
 
 export function CardDetails(props) {
-  console.log(props);
+  let t = props.t;
+  console.log(t);
   return (
     <DetailsContainer>
       {props.candidate.party ? <div className="border"></div> : (null)}
-      <SmallText>{props.candidate.party || null}</SmallText>
+      <SmallText>{t(props.candidate.party) || null}</SmallText>
       <SpacedHorizontalContainer>
         <div className="border2"></div>
         {props.candidate.name.length > 16 ? (<SmallText>{props.candidate.name}</SmallText>) : (<MediumText>{props.candidate.name}</MediumText>)}

@@ -74,7 +74,7 @@ const Saved = (props) => {
                 return(
                     <Fade left>
                         <div className="saved-child">
-                            <SavedCard candidate={c} savedEntry={currentEntry} />
+                            <SavedCard candidate={c} savedEntry={currentEntry} t={t}/>
                         </div>
                     </Fade>
                 )

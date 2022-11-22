@@ -31,7 +31,7 @@ function Layout(props) {
           {ref.map((r) => {return (
             <Fade2 left>
             <div style={{textAlign: "left", margin: "10px", padding: "50px", borderRight: "solid 3px white", borderBottom: "solid 4px white", color: "#716b87"}}>
-              {r.referendumText}
+              {t(r.referendumText)}
             </div>
             </Fade2>
           )})}

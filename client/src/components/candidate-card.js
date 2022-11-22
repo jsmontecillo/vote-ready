@@ -4,6 +4,7 @@ import Card from './card';
 
 
 const CandidateCard = (props) => {
+  console.log(props.t);
     const [users, setUsers] = useState([]);
     const [savedEntryId, setSavedEntryId] = useState('');
     const [isSaved, setIsSaved] = useState(false); 
@@ -81,7 +82,7 @@ const CandidateCard = (props) => {
     return (
       <>
         <div style={{margin: "10px"}}>
-          <Card candidate={candidate} contest={props.contest}/>
+          <Card candidate={candidate} contest={props.contest} t={props.t}/>
           {props.user ? (<button type="button" style={{position: "absolute", marginTop: "-80px", zIndex: "11", marginLeft: "50px"}} className="save" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <p>-</p> : <p>+</p>}</button>) : (null)}
           {/* <div className="candidate-card">
               /* <h4>{candidate.name}</h4>

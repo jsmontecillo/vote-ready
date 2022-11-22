@@ -24,7 +24,7 @@ const Candidates = (props) => {
                     });
                 return (
                     <Fade left>
-                    <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate}/>
+                        <CandidateCard candidate={c} contest={props.candidates.ballotTitle} user={props.user} candidateId={thisCandidate} t={props.t}/>
                     </Fade>
                 )
                 })}
