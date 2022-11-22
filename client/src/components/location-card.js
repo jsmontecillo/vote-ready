@@ -2,6 +2,7 @@ import {useState} from 'react';
 import './location-card.css';
 
 const LocationCard = (props) => {
+    let t = props.t;
     let location = props.location;
     return (
         <div className="location-card">
@@ -9,7 +10,7 @@ const LocationCard = (props) => {
             {location.address.line1}<br/>
             {location.address.city}<br/>
             {location.address.zip}<br/>
-            Hours: {location.pollingHours}<br/>
+            {t('hours')}: {location.pollingHours}<br/>
         </div>
     )
 }

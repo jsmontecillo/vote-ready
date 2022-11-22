@@ -65,10 +65,10 @@ const BottomContainer = styled.div`
 `;
 
 const NikeText = styled.h1`
-  color: #9A9A79;
+  color: #3D3D29;
   text-transform: uppercase;
-  text-shadow: 1px 1px #716b87;
-  margin-bottom: 150px;
+  text-shadow: 1px 1px #202013;
+  margin-bottom: 180px;
   z-index: 10;
   font-size: 30px;
   font-weight: 900;

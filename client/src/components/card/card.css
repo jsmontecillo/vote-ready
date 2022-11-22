@@ -18,7 +18,7 @@
 .border2 {
     background-color: #FFFFF0;
     width: 180px;
-    height: 20px;
+    height: 30px;
     transform: rotate(2deg);
     position: absolute;
     z-index: -5;

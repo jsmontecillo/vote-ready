@@ -1,10 +1,12 @@
 import {useState, useEffect} from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Header from './header.js';
-import la2 from './la2.jpg';
 import LocationCard from './location-card';
+import './locations.css'
+import Fade from 'react-reveal/Fade';
 
 const Locations = (props) => {
+    let t = props.t;
     const [locations, setLocations] = useState([]);
     const [searched, setSearched] = useState(false);
     const [data, setData] = useState(locations);
@@ -35,23 +37,24 @@ const Locations = (props) => {
     return (
         <div>
             {/* <Header title="Polling Locations" image={la2}/> */}
-            <h3>Find Locations</h3>
+            <h3>{t('find')}</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>
-                    <label htmlFor="category-search">City</label>
+                    <label htmlFor="category-search">{t('city')}</label>
                     <input className="box" type="text" id="category-search" onChange={handleSearch}/>
                 </fieldset>
             </form>
 
+            <h3>{t('results')}</h3>
             <div className="location-contain">
                 <div className="location-child">
-                    <h3>Results</h3>
                     {searched ? (data.map((item) => (
-                        <LocationCard location={item} />
+                        <Fade left>
+                            <div>
+                                <LocationCard location={item} t={t}/>
+                            </div>
+                        </Fade>
                     ))): (null)}
-                </div>
-                <div className="location-child">
-                    {/*map goes here*/}
                 </div>
             </div>
         </div>

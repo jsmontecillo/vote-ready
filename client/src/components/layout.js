@@ -1,13 +1,12 @@
 import React from "react";
-import Header from './header.js';
 import Contests from "./contests.js";
 import { BrowserRouter, Route, Link, Outlet } from "react-router-dom";
 import './layout.css';
-import la from './la.jpg';
 import Fade2 from 'react-reveal/Fade';
 import {useState, useEffect} from 'react';
 
 function Layout(props) {
+  let t = props.t;
   const [ref, setRef] = useState([]);
 
   useEffect(() => {
@@ -22,11 +21,11 @@ function Layout(props) {
     <div className="layout">
       <Outlet />
       <div>
-          <Contests user={props.user}/>
+          <Contests user={props.user} t={t}/>
         <div style={{marginTop: "100px"}}>
           <Fade2 top cascade>
             <div>
-              <h1 className="horizontal" style={{float: "right"}}>REFERENDUMS</h1>
+              <h1 className="horizontal" style={{float: "right"}}>{t('referendums').toUpperCase()}</h1>
             </div>
           </Fade2>
           {ref.map((r) => {return (

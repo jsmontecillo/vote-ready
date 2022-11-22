@@ -1,7 +1,9 @@
 import {useState} from 'react';
 import Header from './header';
 
-const Feedback = () => {
+const Feedback = (props) => {
+    let t = props.t;
+    console.log(t);
     const [feedback, setFeedback] = useState({
         name: "",
         date: "",
@@ -28,18 +30,18 @@ const Feedback = () => {
     return (
         <div className="feedback">
             {/* <Header title="Sources and Feedback" /> */}
-            <h1>Feedback</h1>
-            <p>We are always looking to improve the accuracy and neutrality of the site. Please share any constructive criticism with us.</p>
+            <h1>{t('feedback')}</h1>
+            <p>{t('feedback_desc')}</p>
             <form>
                 <fieldset>
-                    <label>Name</label>
+                    <label>{t('name')}</label>
                     <input
                     type="text"
                     id="add-name"
                     value={feedback.name}
                     onChange={handleNameChange}
                     />
-                    <label>Date</label>
+                    <label>{t('date')}</label>
                     <input
                     type="date"
                     id="add-user-favorite"
@@ -47,7 +49,7 @@ const Feedback = () => {
                     value={feedback.date}
                     onChange={handleDateChange}
                     />
-                    <label>Feedback</label>
+                    <label>{t('feedback')}</label>
                     <input
                     type="text"
                     id="add-feedback"
@@ -56,7 +58,7 @@ const Feedback = () => {
                     onChange={handleFeedbackChange}
                     />
                 </fieldset>
-                <button type="submit">Submit</button>
+                <button type="submit">{t('submit')}</button>
             </form>
         </div>
     )

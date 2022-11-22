@@ -170,13 +170,35 @@ hr {
     display: inline-block;
     width: 100%;
     padding: 10px 16px;
-    color: #475f7b;
+    color: #5d4f91;
     background-color: #e5e8ec;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #5d4f91;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5d4f91;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 .invisible {
   display: none;
 }

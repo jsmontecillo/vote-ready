@@ -13,7 +13,7 @@ const saveUser = (user) => {
   })
 }
 
-const AuthenticationButton = () => {
+const AuthenticationButton = (props) => {
   const { isAuthenticated, user } = useAuth0();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AuthenticationButton = () => {
     }
   }, [isAuthenticated, user])
 
-  return isAuthenticated ? <LogoutButton /> : <LoginButton />;
+  return isAuthenticated ? <LogoutButton t={props.t}/> : <LoginButton t={props.t}/>;
 };
 
 export default AuthenticationButton;

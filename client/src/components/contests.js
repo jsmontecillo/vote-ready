@@ -3,6 +3,7 @@ import ContestCard from './contest-card';
 import Fade from 'react-reveal/Fade';
 
 const Contests = (props) => {
+    let t = props.t;
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
@@ -18,7 +19,7 @@ const Contests = (props) => {
         <div className="container">
             <div className="contests">
                 <div style={{marginTop: "20%"}}>
-                    <h3 className="horizontal">MEET THE CANDIDATES</h3>
+                    <h3 className="horizontal">{t('meet').toUpperCase()}</h3>
                     <span className="circle"></span>
                     <span className="circle2"></span>
                 </div>

@@ -3,6 +3,7 @@ import SavedCard from './saved-card';
 import Fade from 'react-reveal/Fade';
 
 const Saved = (props) => {
+    let t = props.t;
     const [contests, setContests] = useState([]);
     const [saved, setSaved] = useState([]);
     const [users, setUsers] = useState([]);
@@ -65,7 +66,7 @@ const Saved = (props) => {
 
     return (
         <>
-            <h1 style={{color: "white"}}>Your Saved Candidates</h1>
+            <h1 style={{color: "white"}}>{t('your_saved')}</h1>
             <div className="saved-container">
                 {saved.map((c) => {    
                 let currentEntry = findingEntry(c);

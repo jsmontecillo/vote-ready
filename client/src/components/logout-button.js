@@ -1,7 +1,9 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const LogoutButton = () => {
+const LogoutButton = (props) => {
+  let t = props.t;
+  console.log(props.t);
   const { logout } = useAuth0();
   return (
     <button
@@ -12,7 +14,7 @@ const LogoutButton = () => {
         })
       }
       style={{float: "right", border: "none", backgroundColor: "black"}}>
-      Log Out
+      {t('logout')}
     </button>
   );
 };

@@ -15,14 +15,14 @@ const DetailsContainer = styled.div`
 
 const MediumText = styled.span`
   font-size: 20px;
-  color: #9A9A79;
+  color: #3D3D29;
   font-weight: 800;
   text-transform: uppercase;
 `;
 
 const SmallText = styled.span`
   font-size: 11px;
-  color: #9A9A79;
+  color: #3D3D29;
   font-weight: 700;
   text-transform: uppercase;
 `;
@@ -36,7 +36,7 @@ const SpacedHorizontalContainer = styled.div`
 
 const BuyButton = styled.button`
   padding: 10px 16px;
-  background-color: #9A9A79;
+  background-color: #3D3D29;
   color: #000;
   text-transform: uppercase;
   font-size: 16px;
