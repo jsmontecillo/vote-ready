@@ -35,6 +35,7 @@ const Feedback = (props) => {
         const message = event.target.value;
         setFeedback((feedback) => ({ ...feedback, message }));
     };
+
     return (
         <div className="feedback">
             {isSubmitted ? (<h1>{t('thanks')}</h1>) : (

@@ -18,7 +18,6 @@ const Locations = (props) => {
                 setLocations(data.pollingLocations);
             }) 
     }, []);
-    console.log(locations);
 
     const handleSearch = async (e) => {
         e.preventDefault();

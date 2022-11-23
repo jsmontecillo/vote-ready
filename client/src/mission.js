@@ -1,4 +1,3 @@
-import Header from './components/header';
 import vote from './vote.png';
 import Fade from 'react-reveal/Fade';
 

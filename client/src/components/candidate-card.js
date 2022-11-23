@@ -10,7 +10,6 @@ const CandidateCard = (props) => {
     const [saved, setSaved] = useState([]);
     const [thisUser, setThisUser] = useState(null);
 
-    //saving props
     let candidate = props.candidate;
     let contest = props.contest;
     useEffect(() => {
@@ -31,12 +30,12 @@ const CandidateCard = (props) => {
         .then((saved) => {
           setSaved(saved);
       });
-            //searching for user currently logged in
-        //check if user has saved candidate already
+        //searching for user currently logged in
         if(props.user && foundUser){
           let currentUser = saved.filter((entry) => {
             return entry.user_id === foundUser.id;
            });
+           //check if user has saved candidate already and setting entry
            if(currentUser.length > 0){
             let alreadySaved = currentUser.map((entry) => {
               if(props.candidateId && entry){
@@ -78,17 +77,12 @@ const CandidateCard = (props) => {
       let response = await fetch(`api/saved/${entryId}`, {method: "DELETE"})
       await response.json();
     }
+    
     return (
       <>
         <div style={{margin: "10px"}}>
           <Card candidate={candidate} contest={props.contest} t={props.t}/>
           {props.user ? (<button type="button" style={{position: "absolute", marginTop: "-80px", zIndex: "11", marginLeft: "50px"}} className="save" onClick={() => {isSaved ? handleRemove(savedEntryId) : handleSaved(props.candidateId.id)}}>{isSaved ? <p>-</p> : <p>+</p>}</button>) : (null)}
-          {/* <div className="candidate-card">
-              /* <h4>{candidate.name}</h4>
-              <h4>{candidate.party ? candidate.party : null}</h4>
-              <p>{candidate.phone || null}</p>
-              <p>{candidate.candidateUrl || candidate.url}</p>
-          </div> */}
         </div>
       </>
     )

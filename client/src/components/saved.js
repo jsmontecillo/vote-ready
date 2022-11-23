@@ -42,14 +42,16 @@ const Saved = (props) => {
     }, [saved.length, found]);
 
     const findingEntry = (c) => {
+        /* searching for current logged in user */
         let currentUser = savedEntries.map((entry) => {
             if(found.id){
                 if(entry.user_id === found.id){
-                    return entry
+                    return entry;
                 };
             }
         });
-
+        
+        /* filtering for the entry with the current user and relevant candidate */
         let alreadySaved = currentUser.filter((entry) => {
             if(c && entry){
                 if(entry.candidate_id === c.candidate_id){
@@ -58,6 +60,7 @@ const Saved = (props) => {
             }
 
         });
+
         if(alreadySaved[0] && alreadySaved[0].id){
             return alreadySaved[0].id;
         }

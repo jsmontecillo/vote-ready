@@ -1,7 +1,6 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import Padilla from '../images/padilla.png';
 import { CardDetails } from "./designed-card";
 import './card.css';
 
