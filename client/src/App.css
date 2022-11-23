@@ -33,10 +33,6 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -77,6 +73,10 @@ span {
   background-color: #7263a5;
   height: 65px;
   padding: 20px;
+}
+
+a:hover {
+  color: #5d4f91;
 }
 
 .title {

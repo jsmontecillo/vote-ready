@@ -7,12 +7,12 @@ const Mission = (props) => {
     return (
         <>
             <div className="description">
-                <Fade right delay={800}>
+                <Fade right delay={500}>
                     <div>
                         <p style={{position: "absolute", width: "750px"}}>{props.t('mission_statement')}</p>
                     </div>
                 </Fade>
-                <Fade left delay={800}>
+                <Fade left delay={500}>
                     <div>
                         <img src={vote} alt="person giving speech" height="800px" style={{position: "relative", marginLeft: "200px", zIndex: "-10"}} />
                     </div>
