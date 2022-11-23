@@ -29,7 +29,7 @@ input {
 
 
 .contests {
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden; 
     display: flex;
     height: 550px;
@@ -110,3 +110,14 @@ input {
     width: 20%;
     vertical-align: middle;
 }
+
+  @media screen and (min-width: 1600px) {
+    .circle2 {
+        display:none;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .circle2 {
+        display:none;
+    }
+  }

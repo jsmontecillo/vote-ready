@@ -21,7 +21,7 @@ function Layout(props) {
     <div className="layout">
       <Outlet />
       <div>
-          <Contests user={props.user} t={t}/>
+          <div><Contests user={props.user} t={t}/></div>
         <div style={{marginTop: "100px"}}>
           <Fade2 top cascade>
             <div>
