@@ -31,6 +31,12 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
 
 ![LandingPage](https://i.ibb.co/n3hBB9W/Screen-Shot-2022-11-23-at-8-56-42-AM.png)
 
+## Features
+- Adding and removing favorite candidates.
+- Page translation for English, Spanish, and French.
+- Filtering voting locations with directions based on city.
+- Feedback form sent as email to Vote Ready team's email with an automated response back to user (Test this with provided user above).
+
 ## Tech Stack
 
 <table align="center">
