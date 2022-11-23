@@ -4,7 +4,6 @@ import Card from './card';
 
 
 const CandidateCard = (props) => {
-  console.log(props.t);
     const [users, setUsers] = useState([]);
     const [savedEntryId, setSavedEntryId] = useState('');
     const [isSaved, setIsSaved] = useState(false); 

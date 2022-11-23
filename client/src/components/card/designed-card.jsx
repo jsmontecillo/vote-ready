@@ -67,7 +67,6 @@ const NikeLogo = styled.div`
 
 export function CardDetails(props) {
   let t = props.t;
-  console.log(t);
   return (
     <DetailsContainer>
       {props.candidate.party ? <div className="border"></div> : (null)}
