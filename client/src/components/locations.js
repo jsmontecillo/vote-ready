@@ -37,7 +37,7 @@ const Locations = (props) => {
     return (
         <div>
             {/* <Header title="Polling Locations" image={la2}/> */}
-            <h3>{t('find')}</h3>
+            <h3 style={{fontWeight: "900"}}>{t('find')}</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>
                     <label htmlFor="category-search">{t('city')}</label>
@@ -45,7 +45,7 @@ const Locations = (props) => {
                 </fieldset>
             </form>
 
-            <h3>{t('results')}</h3>
+            <h3 style={{fontWeight: "900", fontSize: "40px", textAlign: "left", marginLeft: "50px"}}>{searched ? t('results') : null}</h3>
             <div className="location-contain">
                 <div className="location-child">
                     {searched ? (data.map((item) => (
