@@ -10,7 +10,7 @@ const LocationCard = (props) => {
             {location.address.line1}<br/>
             {location.address.city}<br/>
             {location.address.zip}<br/>
-            <a href={`https://maps.google.com/?q=${location.latitude},${location.longitude}`} style={{color:"black"}}><strong>Directions</strong></a><br/>
+            <a href={`https://maps.google.com/?q=${location.latitude},${location.longitude}`} target="_blank" style={{color:"black"}}><strong>Directions</strong></a><br/>
             {t('hours')}: {location.pollingHours}<br/>
         </div>
     )
