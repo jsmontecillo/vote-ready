@@ -110,11 +110,24 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
 
 ## APIs
 
-
-| API             | Link                                                              |
-| ----------------- | ------------------------------------------------------------------ |
-| Google Civic Information API | [Google Civic Information API](https://developers.google.com/civic-information/docs/v2) |
-| Auth0 | [Auth0](https://auth0.com/docs) |
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://datamade.us/images/blog/2014-09-11-what-are-civic-apps-for/google-civic-information-api.png" height="48" alt="google-civic-info-api" />
+    </td>
+    <td align="center" width="96">
+       <img src="https://user-images.githubusercontent.com/74997368/168984679-a7fa607e-2a9a-46c8-91a6-9a9e77501dbd.png" width="48" height="48" alt="auth0" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="96">
+      <br><a href="https://developers.google.com/civic-information/docs/v2">Google Civic Information API</a>
+    </td>
+    <td align="center" width="96" >
+      <br><a href="https://auth0.com/docs">Auth0</a>
+    </td>
+  </tr>
+</table>
 
 
 ### Installation
