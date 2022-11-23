@@ -63,19 +63,23 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
     </td>
     </tr>
   <tr>
-    <td align="center" width="120">
+    <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168979311-4a486cad-32c8-46f4-a5da-912fdc51b2d6.png" width="48" height="48" alt="React" />
       <br>React
     </td>
-    <td align="center" width="120">
+    <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168979848-733f7090-0f78-401a-9ceb-4267231abef7.png" width="48" height="48" alt="Node" />
       <br>Node
     </td>
-    <td align="center" width="120">
+    <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168980647-1690f9de-bf0e-4318-93cb-1b2ba3701ded.png" width="48" height="48" alt="Bootstrap" />
       <br>Bootstrap
     </td>
-    <td align="center" width="120"> 
+        <td align="center" width="96">
+        <img src="https://avatars.githubusercontent.com/u/8546082?s=280&v=4" width="48" height="48" alt="i18next" />
+      <br>i18next
+    </td>
+    <td align="center" width="96"> 
         <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/j8z02ssteea4zj1k1nyz" width="48" height="48" alt="Render" />
       <br>Render
     </td>
