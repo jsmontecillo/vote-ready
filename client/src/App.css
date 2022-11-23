@@ -234,6 +234,13 @@ hr {
   margin-top: 10px;
 }
 
+.description {
+  font-size: 27px;
+  padding: 60px;
+  text-align: left;
+  text-shadow: 1px 1px #f8614b;
+}
+
 /* For Tablet View */
 @media screen and (min-device-width: 768px)
 and (max-device-width: 1023px) {
