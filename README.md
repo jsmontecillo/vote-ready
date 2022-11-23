@@ -40,7 +40,6 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
 ## Tech Stack
 
 <table align="center">
-  <tr>
     <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168923681-ece848fc-5700-430b-957f-e8de784e9847.png" width="48" height="48" alt="html" />
       <br>html
@@ -61,8 +60,6 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
         <img src="https://user-images.githubusercontent.com/74997368/168978951-5ac2af5e-c911-4e59-b493-683071cf1860.png" width="48" height="48" alt="Express" />
       <br>Express
     </td>
-    </tr>
-  <tr>
     <td align="center" width="96">
         <img src="https://user-images.githubusercontent.com/74997368/168979311-4a486cad-32c8-46f4-a5da-912fdc51b2d6.png" width="48" height="48" alt="React" />
       <br>React
@@ -79,11 +76,15 @@ Vote Ready is a web app that aims to combat the density and overwhelm of other a
         <img src="https://avatars.githubusercontent.com/u/8546082?s=280&v=4" width="48" height="48" alt="i18next" />
       <br>i18next
     </td>
+        </td>
+        <td align="center" width="96">
+        <img src="https://www.emailjs.com/logo.png" width="48" height="48" alt="emailjs" />
+      <br>EmailJS
+    </td>
     <td align="center" width="96"> 
         <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/j8z02ssteea4zj1k1nyz" width="48" height="48" alt="Render" />
       <br>Render
     </td>
-  </tr>
 </table>
 
 ## Tools
