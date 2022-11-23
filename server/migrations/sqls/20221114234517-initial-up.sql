@@ -100,6 +100,33 @@ INSERT INTO candidates (id, name, party, email, phone, url, facebook, twitter) V
 INSERT INTO candidates (id, name, party, email, phone, url, facebook, twitter) VALUES (126, 'NANCY PEARLMAN', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO candidates (id, name, party, email, phone, url, facebook, twitter) VALUES (2, 'Mark P. Meuser', 'Republican Party', 'contact@markmeuser.com', '(209) 763-8737', 'https://www.markmeuser.com/', NULL, NULL);
 
+INSERT INTO users (id, first_name, last_name, email) VALUES (1, 'Janice', 'Montecillo', 'jsmontecillo@gmail.com');
+INSERT INTO users (id, first_name, last_name, email) VALUES (3, 'Janice', 'M', 'jmontecilloinc@gmail.com');
+INSERT INTO users (id, first_name, last_name, email) VALUES (27, 'test', 'test', 'votereadytest1@gmail.com');
+
+INSERT INTO saved (id, user_id, candidate_id) VALUES (23, 1, 71);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (25, 1, 1);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (32, 1, 45);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (33, 3, 67);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (52, 3, 42);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (53, 3, 45);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (54, 3, 54);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (56, 3, 49);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (57, 3, 50);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (58, 3, 152);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (59, 3, 25);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (60, 3, 33);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (61, 3, 36);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (62, 3, 27);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (64, 3, 28);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (67, 3, 100);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (69, 3, 84);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (72, 3, 92);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (73, 27, 76);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (74, 27, 71);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (75, 27, 92);
+INSERT INTO saved (id, user_id, candidate_id) VALUES (76, 27, 100);
+
 
 SELECT pg_catalog.setval('candidates_id_seq', 162, true);
 

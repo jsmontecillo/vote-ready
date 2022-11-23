@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently 'npm start' 'cd .. && cd client && npm start'",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js --ignore client"
   },
   "author": "",
   "license": "ISC",

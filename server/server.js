@@ -75,7 +75,6 @@ app.get("/election", (req,res) => {
 });
 
 app.get('/election-data.json', (req, res) => {
-  console.log(res)
 
   /* Just send the file */
   res.sendFile(path.join(__dirname, '/election-data.json'));

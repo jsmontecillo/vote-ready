@@ -1,4 +1,4 @@
-import footer from './back.jpg';
+import footer from './los.jpg';
 import './footer.css';
 import Feedback from './components/feedback.js';
 const Footer = (props) => {

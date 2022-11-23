@@ -6,7 +6,7 @@ import {useEffect} from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const saveUser = (user) => {
-  return fetch("http://localhost:8888/api/me", {
+  return fetch('http://localhost:8888/api/me', {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(user),
@@ -15,6 +15,7 @@ const saveUser = (user) => {
 
 const AuthenticationButton = (props) => {
   const { isAuthenticated, user } = useAuth0();
+  console.log(isAuthenticated);
 
   useEffect(() => {
     if(isAuthenticated) {
