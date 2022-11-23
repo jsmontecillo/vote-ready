@@ -58,7 +58,7 @@ const Saved = (props) => {
             }
 
         });
-        if(alreadySaved[0].id){
+        if(alreadySaved[0] && alreadySaved[0].id){
             return alreadySaved[0].id;
         }
         
@@ -68,17 +68,19 @@ const Saved = (props) => {
         <>
             <h1 style={{color: "white"}}>{t('your_saved')}</h1>
             <div className="saved-container">
-                {saved.map((c) => {    
-                let currentEntry = findingEntry(c);
-                console.log(currentEntry);                       
-                return(
-                    <Fade left>
-                        <div className="saved-child">
-                            <SavedCard candidate={c} savedEntry={currentEntry} t={t}/>
-                        </div>
-                    </Fade>
-                )
-                })}
+                {saved.map((c) => {
+                console.log(c);
+                if(c) {    
+                    let currentEntry = findingEntry(c);
+                    console.log(currentEntry);                       
+                    return(
+                        <Fade left>
+                            <div className="saved-child">
+                                <SavedCard candidate={c} savedEntry={currentEntry} t={t}/>
+                            </div>
+                        </Fade>
+                    )
+                }})}
             </div>
         </>
     )
