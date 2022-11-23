@@ -64,16 +64,21 @@ const Saved = (props) => {
         
     }
 
+
     return (
         <>
-            <h1 style={{color: "white"}}>{t('your_saved')}</h1>
+            <Fade top>
+                <div>
+                    <h1 style={{fontWeight: "900"}}>{t('your_saved')}</h1>
+                </div>
+            </Fade>
             <div className="saved-container">
                 {saved.map((c) => {
                 console.log(c);
                 if(c) {    
                     let currentEntry = findingEntry(c);
                     console.log(currentEntry);                       
-                    return(
+                    return (
                         <Fade left>
                             <div className="saved-child">
                                 <SavedCard candidate={c} savedEntry={currentEntry} t={t}/>

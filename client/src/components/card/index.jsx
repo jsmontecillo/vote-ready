@@ -117,7 +117,7 @@ function Card(props) {
       >
         <TopContainer>
           <CircleWrapper>
-            <Circle style={props.candidate.party === "Party Preference: Democratic" ? {backgroundColor: "#83A1CD"} : props.candidate.party === "Party Preference: Republican" ? {backgroundColor: "#CB4C4E"} : {backgroundColor: "grey"}}/>
+            <Circle style={props.candidate.party === "Party Preference: Democratic" ? {backgroundColor: "#83A1CD"} : props.candidate.party === "Party Preference: Republican" ? {backgroundColor: "#CB4C4E"} : props.candidate.party === "Party Preference: Green" ? {backgroundColor: "#96D294"} : {backgroundColor: "grey"}}/>
           </CircleWrapper>
           <ShoesWrapper>
             <Shoes
@@ -126,7 +126,7 @@ function Card(props) {
               dragElastic={0.12}
               whileTap={{ cursor: "grabbing" }}
             >
-              <img src={props.candidate.image || Padilla} style={{height: "400px", width: "283px", borderRadius: "10px", objectFit: "cover"}}/>
+              <img src={props.candidate.image || null} style={{height: "400px", width: "283px", borderRadius: "10px", objectFit: "cover"}}/>
             </Shoes>
           </ShoesWrapper>
           <NikeText><div style={props.contest.length > 36 ? {fontSize: "20px"} : {}}>{t(props.contest)}</div></NikeText>
