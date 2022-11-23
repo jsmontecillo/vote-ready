@@ -1,21 +1,29 @@
-import {useState} from 'react';
-import Header from './header';
+import {useState, useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 const Feedback = (props) => {
     let t = props.t;
-    console.log(t);
+    const form = useRef();
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const [feedback, setFeedback] = useState({
-        name: "",
+        from_name: "",
         date: "",
-        feedback: ""
+        message: ""
     })
-    const handleSubmit = () => {
-        console.log("hello");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitted(!isSubmitted);
+        emailjs.sendForm('service_ugcmpok', 'template_y4k5tgg', form.current, 'AOZ5H1-DWFINkCYbT')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
     }
 
     const handleNameChange = (event) => {
-        const name = event.target.value;
-        setFeedback((feedback) => ({ ...feedback, name }));
+        const from_name = event.target.value;
+        setFeedback((feedback) => ({ ...feedback, from_name }));
     };
 
     const handleDateChange = (event) => {
@@ -24,21 +32,22 @@ const Feedback = (props) => {
     };
     
     const handleFeedbackChange = (event) => {
-        const feedback = event.target.value;
-        setFeedback((feedback) => ({ ...feedback, feedback }));
+        const message = event.target.value;
+        setFeedback((feedback) => ({ ...feedback, message }));
     };
     return (
         <div className="feedback">
-            {/* <Header title="Sources and Feedback" /> */}
-            <h1>{t('feedback')}</h1>
+            {isSubmitted ? (<h1>{t('thanks')}</h1>) : (
+            <><h1>{t('feedback')}</h1>
             <p>{t('feedback_desc')}</p>
-            <form>
+            <form ref={form} onSubmit={handleSubmit}>
                 <fieldset>
                     <label>{t('name')}</label>
                     <input
                     type="text"
                     id="add-name"
-                    value={feedback.name}
+                    name="from_name"
+                    value={feedback.from_name}
                     onChange={handleNameChange}
                     />
                     <label>{t('date')}</label>
@@ -48,18 +57,20 @@ const Feedback = (props) => {
                     required
                     value={feedback.date}
                     onChange={handleDateChange}
-                    />
-                    <label>{t('feedback')}</label>
-                    <input
+                    /><br/>
+                    <label>{t('feedback')}</label><br/>
+                    <textarea rows="5" cols="50"
+                    placeholder="Leave some feedback..."
                     type="text"
+                    name="message"
                     id="add-feedback"
                     required
-                    value={feedback.feedback}
+                    value={feedback.message}
                     onChange={handleFeedbackChange}
                     />
                 </fieldset>
-                <button type="submit">{t('submit')}</button>
-            </form>
+                <button type="submit" onSubmit={handleSubmit}>{t('submit')}</button>
+            </form></>)}
         </div>
     )
 }

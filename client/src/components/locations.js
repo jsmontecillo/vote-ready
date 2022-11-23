@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
-import Header from './header.js';
 import LocationCard from './location-card';
 import './locations.css'
 import Fade from 'react-reveal/Fade';
@@ -36,7 +35,6 @@ const Locations = (props) => {
 
     return (
         <div>
-            {/* <Header title="Polling Locations" image={la2}/> */}
             <h3 style={{fontWeight: "900"}}>{t('find')}</h3>
             <form id="search" action="#" onSubmit={handleSearch}>
                 <fieldset>

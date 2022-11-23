@@ -112,7 +112,6 @@ function App() {
               <li><a className="sd-link hover-underline-animation" onClick={() => {setClicked(!isClicked)}}><Link to="/" className="link">{t('home').toUpperCase()}</Link></a></li>
               <li><a className="sd-link hover-underline-animation" onClick={() => {setClicked(!isClicked)}}><Link to="/mission" className="link">{t('mission').toUpperCase()}</Link></a></li>
               <li><a className="sd-link hover-underline-animation" onClick={() => {setClicked(!isClicked)}}><Link to="/locations" className="link">{t('locations').toUpperCase()}</Link></a></li>
-              <li><a className="sd-link hover-underline-animation" onClick={() => {setClicked(!isClicked)}}><Link to="/feedback" className="link">{t('feedback').toUpperCase()}</Link></a></li>
               {user ? (<li><a className="sd-link hover-underline-animation" onClick={() => {setClicked(!isClicked)}}><Link to="/saved" className="link">{t('saved').toUpperCase()}</Link></a></li>) : (null)}
             </ul>
           </div>
@@ -123,7 +122,6 @@ function App() {
           <Route path="/" element={<Layout user={user} t={t}/>} />
           <Route path="/locations" element={<Locations user={user} t={t}/>} />
           <Route path="/mission" element={<Mission user={user} t={t}/>} />
-          <Route path="/feedback" element={<Feedback user={user} t={t}/>} />
           <Route path="/saved" element={<Saved user={user} t={t}/>} />
       </Routes>
     <Footer t={t}/>
